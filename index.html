@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
-            --bg-color: #0F111A; /* Швейцарский крипто-банк: глубокий графит */
+            --bg-color: #0F111A; 
             --card-bg: #161A26;
-            --text-main: #F5F6FA; /* Платиновый белый */
+            --text-main: #F5F6FA; 
             --text-muted: #8E96A7;
-            --primary: #00D2FF; /* Неоновый синий ИИ */
+            --primary: #00D2FF; 
             --primary-glow: rgba(0, 210, 255, 0.15);
-            --accent: #00E676; /* Изумрудная безопасность */
+            --accent: #00E676; 
             --accent-glow: rgba(0, 230, 118, 0.15);
         }
 
@@ -93,7 +93,6 @@
             color: #FFFFFF;
         }
 
-        /* Премиальная адаптивная сетка тарифов */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -120,7 +119,6 @@
             box-shadow: 0 15px 35px var(--primary-glow);
         }
 
-        /* Выделение VIP тарифа за $69 */
         .price-card.vip {
             border: 2px solid var(--accent);
             background: linear-gradient(180deg, #161A26 0%, #11221A 100%);
@@ -278,7 +276,6 @@
             box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4);
         }
 
-        /* Блок репутации */
         .reputation-banner {
             background: linear-gradient(135deg, #161A26 0%, #0F111A 100%);
             border-left: 4px solid var(--primary);
@@ -301,7 +298,6 @@
             font-size: 17px;
         }
 
-        /* Блок дисклеймера */
         .disclaimer-section {
             background-color: rgba(22, 26, 38, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.02);
@@ -346,3 +342,7 @@
             header { padding: 50px 0 30px 0; }
             h1 { font-size: 36px; }
             .slogan { font-size: 16px; }
+            .section-title { font-size: 24px; margin-bottom: 30px; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .reputation-banner { padding: 25px; margin: 40px 0; }
+            .reputation-banner h3 { font-size: 20px; }
