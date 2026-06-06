@@ -86,130 +86,251 @@
     </style>
 </head>
 <body>
-<!-- Переключатель языков -->
-    <div style="text-align: right; padding: 15px 20px; max-width: 1200px; margin: 0 auto; font-size: 14px;">
-        <a href="https://github.io" style="color: #00D2FF; text-decoration: none; margin-right: 15px; font-weight: 700;">RU</a>
-        <a href="https://google.com" target="_blank" style="color: #8E96A7; text-decoration: none; font-weight: 600;">EN (Google Translate)</a>
+ <!-- Переключатель языков -->
+    <div style="text-align: right; padding: 15px 20px; max-width: 1200px; margin: 0 auto; font-size: 14px; position: relative; z-index: 9999;">
+        <span id="lang-ru-btn" onclick="switchLang('ru')" style="color: #00D2FF; cursor: pointer; margin-right: 15px; font-weight: 700;">RU</span>
+        <span id="lang-en-btn" onclick="switchLang('en')" style="color: #8E96A7; cursor: pointer; font-weight: 600;">EN</span>
     </div>
-    <header class="container">
-        <div class="logo-box"><span>CS</span></div>
-        <h1>Capital Shield AI</h1>
-        <div class="slogan">AI-powered due diligence for serious investors</div>
-    </header>
 
-    <main class="container">
-        <section class="reputation-banner">
-            <h3>Интеллектуальная защита вашего капитала.</h3>
-            <p>Capital Shield AI — это уникальный аналитический сервис нового поколения, который полностью меняет правила игры для серьезных инвесторов. Мы помогаем проводить комплексный Due Diligence инвестиционных платформ, сканировать смарт-контракты на скрытые ловушки и моделировать персональную дорожную карту: от безопасной суммы входа до момента экстренной эвакуации прибыли. Защитите свои активы и репутацию на основе точных ИИ-данных до того, как нажмете кнопку «Внести депозит».</p>
+    <!-- РУССКАЯ ВЕРСИЯ САЙТА -->
+    <div id="block-ru">
+        <header class="container">
+            <div class="logo-box"><span>CS</span></div>
+            <h1>Capital Shield AI</h1>
+            <div class="slogan">AI-powered due diligence for serious investors</div>
+        </header>
+        <main class="container">
+            <section class="reputation-banner">
+                <h3>Интеллектуальная защита вашего капитала.</h3>
+                <p>Capital Shield AI — это уникальный аналитический сервис нового поколения, который полностью меняет правила игры для серьезных инвесторов. Мы помогаем проводить комплексный Due Diligence инвестиционных платформ, сканировать смарт-контракты на скрытые ловушки и моделировать персональную дорожную карту: от безопасной суммы входа до момента экстренной эвакуации прибыли. Защитите свои активы и репутацию на основе точных ИИ-данных до того, как нажмете кнопку «Внести депозит».</p>
+            </section>
+            <h2 class="section-title">Тарифные планы консалтинга</h2>
+            <section class="pricing-grid">
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="card-title">Due Diligence инвест-проекта</h3>
+                        <div class="meta-info"><strong>Для кого:</strong> инвестор, который нашёл проект и хочет знать — заходить или нет.</div>
+                        <div class="card-desc"><strong>Что получает:</strong> Полный аудит по 14 модулям Алгоритма v6.0 — от OSINT-разведки и юридической прозрачности до анализа денежного следа и индикаторов эндшпиля. На выходе — чёткий вердикт 🔴🟠🟡🟢🔵 и рекомендация по действию.</div>
+                        <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Закрывает вопрос:</strong> «Это реальный проект или пирамида, которая скоро рухнет?»</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$29</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Due Diligence инвест-проекта" class="btn-action">Заказать аудит</a>
+                    </div>
+                </div>
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="card-title">Анализ смарт-контракта</h3>
+                        <div class="meta-info"><strong>Для кого:</strong> крипто-инвестор, который хочет зайти в токен или DeFi-протокол.</div>
+                        <div class="card-desc"><strong>Что получает:</strong> Технический аудит кода контракта по 4 ключевым уязвимостям:</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Mint</strong> — может ли эмитент печатать токены без ограничений</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Honeypot</strong> — можно ли вообще продать токен</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Ownership</strong> — кто контролирует контракт и может ли изменить правила</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Liquidity Lock</strong> — заблокирована ли ликвидность или её можно вывести в любой момент</li>
+                        </ul>
+                        <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Закрывает вопрос:</strong> «Не потеряю ли я деньги из-за технической ловушки в коде?»</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$19</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Анализ смарт-контракта" class="btn-action">Заказать аудит</a>
+                    </div>
+                </div>
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="card-title">Анализ механик доходности</h3>
+                        <div class="meta-info"><strong>Для кого:</strong> инвестор, который уже решил войти и хочет выжать максимум с минимальным риском.</div>
+                        <div class="card-desc"><strong>Что получает:</strong> Персональную стратегию по 10 ключевым вопросам:</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-chevron-right"></i> 1. Стоит ли вообще заходить?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 2. С какой суммы начинать?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 3. На какой срок вкладываться?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 4. Сколько можно реально заработать?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 5. Когда входить?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 6. Какую часть капитала вкладывать?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 7. Когда забирать тело депозита?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 8. Когда выходить полностью?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 9. Какая вероятность успеха?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 10. Какие риски не учтены?</li>
+                        </ul>
+                        <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Закрывает вопрос:</strong> «Как именно работать с проектом, чтобы заработать, а не потерять?»</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$49</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Анализ механик доходности" class="btn-action">Заказать анализ</a>
+                    </div>
+                </div>
+                <div class="price-card vip">
+                    <div class="vip-badge">Выгодно</div>
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3 class="card-title">Полный комплексный аудит</h3>
+                        <div class="meta-info"><strong>Для кого:</strong> серьёзный инвестор, который не хочет рисковать значимой суммой без полной картины.</div>
+                        <div class="card-desc"><strong>Что получает:</strong> Все три продукта в одном пакете:</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check-double"></i> Due Diligence по 14 модулям</li>
+                            <li><i class="fa-solid fa-check-double"></i> Анализ смарт-контракта</li>
+                            <li><i class="fa-solid fa-check-double"></i> Стратегия доходности по 10 вопросам</li>
+                        </ul>
+                        <div class="meta-info" style="margin-bottom:15px;"><strong>Экономия:</strong> <strong>$28</strong> (вместо $97 по отдельности)</div>
+                        <div class="formula-box">«Прежде чем инвестировать $1000 в проект — потратьте $69 на полный аудит. Мы сэкономим вам часы исследований и убережём от потери капитала.»</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$69</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Полный комплексный аудит" class="btn-action">Получить комплекс</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="container">
+            <div class="disclaimer-section">
+                <h4>⚖️ ДИСКЛЕЙМЕР</h4>
+                <p>Отчет «Capital Shield AI» является субъективным аналитическим мнением, основанным на данных из открытых источников и алгоритмах ИИ. Данная информация не является финансовым советом или призывом к действию. Мы не несем ответственности за сохранность ваших средств и результаты ваших инвестиций. Помните: в мире криптовалют риск потери 100% капитала существует всегда. Инвестируйте только то, что готовы потерять. Проверяйте факты самостоятельно.</p>
+            </div>
         </section>
-
-        <h2 class="section-title">Тарифные планы</h2>
-        <section class="pricing-grid">
-            <!-- Тариф 1 -->
-            <div class="price-card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 class="card-title">Due Diligence инвест-проекта</h3>
-                    <div class="meta-info"><strong>Для кого:</strong> инвестор, который нашёл проект и хочет знать — заходить или нет.</div>
-                    <div class="card-desc"><strong>Что получает:</strong> Полный аудит по 14 модулям Алгоритма v6.0 — от OSINT-разведки и юридической прозрачности до анализа денежного следа и индикаторов эндшпиля. На выходе — чёткий вердикт 🔴🟠🟡🟢🔵 и рекомендация по действию.</div>
-                    <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Закрывает вопрос:</strong> «Это реальный проект или пирамида, которая скоро рухнет?»</div>
+    </div>
+     <!-- АНГЛИЙСКАЯ ВЕРСИЯ САЙТА -->
+    <div id="block-en" style="display: none;">
+        <header class="container">
+            <div class="logo-box"><span>CS</span></div>
+            <h1>Capital Shield AI</h1>
+            <div class="slogan">AI-powered due diligence for serious investors</div>
+        </header>
+        <main class="container">
+            <section class="reputation-banner">
+                <h3>Intelligent Capital Protection.</h3>
+                <p>Capital Shield AI is a next-generation analytical intelligence service that completely redefines risk management for serious investors. We empower venture capitalists, business angels, and investment syndicates with comprehensive Due Diligence of high-yield platforms, detailed smart contract technical audits, and data-driven investment horizontals. Secure your funds and market reputation before committing capital to a repository.</p>
+            </section>
+            <h2 class="section-title">Consulting Packages</h2>
+            <section class="pricing-grid">
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="card-title">Investment Due Diligence</h3>
+                        <div class="meta-info"><strong>Target Audience:</strong> Investors evaluating an alternative platform or DeFi fund.</div>
+                        <div class="card-desc"><strong>Deliverables:</strong> Rigorous 14-module audit verifying team backgrounds (OSINT), legal registrations, hidden terms of use traps, and on-chain capital tracking. Provides a distinct analytical risk verdict 🔴🟠🟡🟢🔵 and actionable entry guidance.</div>
+                        <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Solves:</strong> "Is this a legitimate project or an imminent financial anomaly?"</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$29</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Investment Due Diligence Inquiry" class="btn-action">Order Audit</a>
+                    </div>
                 </div>
-                <div>
-                    <div class="card-price">$29</div>
-                    <a href="mailto:gebor2011@://gmail.com Shield AI - Due Diligence инвест-проекта" class="btn-action">Заказать аудит</a>
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="card-title">Smart Contract Analysis</h3>
+                        <div class="meta-info"><strong>Target Audience:</strong> Crypto investors deploying liquidity into tokens or DeFi protocols.</div>
+                        <div class="card-desc"><strong>Deliverables:</strong> Deep technical code vulnerability review focused on 4 critical exploit markers:</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Mint</strong> — Can the team generate unlimited tokens?</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Honeypot</strong> — Are users restricted from selling the asset?</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Ownership</strong> — Who controls the contract rules?</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Liquidity Lock</strong> — Is the pool securely locked via time-locks?</li>
+                        </ul>
+                        <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Solves:</strong> "Will my funds be trapped due to intentional backend logic?"</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$19</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Smart Contract Analysis Inquiry" class="btn-action">Order Audit</a>
+                    </div>
                 </div>
-            </div>
-            <!-- Тариф 2 -->
-            <div class="price-card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3 class="card-title">Анализ смарт-контракта</h3>
-                    <div class="meta-info"><strong>Для кого:</strong> крипто-инвестор, который хочет зайти в токен или DeFi-протокол.</div>
-                    <div class="card-desc"><strong>Что получает:</strong> Технический аудит кода контракта по 4 ключевым уязвимостям:</div>
-                    <ul class="card-list">
-                        <li><i class="fa-solid fa-circle-check"></i> <strong>Mint</strong> — может ли эмитент печатать токены без ограничений</li>
-                        <li><i class="fa-solid fa-circle-check"></i> <strong>Honeypot</strong> — можно ли вообще продать токен</li>
-                        <li><i class="fa-solid fa-circle-check"></i> <strong>Ownership</strong> — кто контролирует контракт и может ли изменить правила</li>
-                        <li><i class="fa-solid fa-circle-check"></i> <strong>Liquidity Lock</strong> — заблокирована ли ликвидность или её можно вывести в любой момент</li>
-                    </ul>
-                    <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Закрывает вопрос:</strong> «Не потеряю ли я деньги из-за технической ловушки в коде?»</div>
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="card-title">Yield Mechanics Strategy</h3>
+                        <div class="meta-info"><strong>Target Audience:</strong> Investors seeking to maximize returns while mitigating volatility.</div>
+                        <div class="card-desc"><strong>Deliverables:</strong> Custom risk map resolving 10 definitive capital allocation points:</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-chevron-right"></i> 1. Is entry justifiable?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 2. Optimal capital amount?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 3. Recommended timeline?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 4. Practical return horizontal?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 5. Strategic timing of entry?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 6. Diversification limits?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 7. Principal withdrawal time?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 8. Final exit horizon?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 9. Mathematical success probability?</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> 10. Unaccounted micro-risks?</li>
+                        </ul>
+                        <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Solves:</strong> "How to interact with the model to secure net gains?"</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$49</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Yield Mechanics Strategy Inquiry" class="btn-action">Order Strategy</a>
+                    </div>
                 </div>
-                <div>
-                    <div class="card-price">$19</div>
-                    <a href="mailto:gebor2011@://gmail.com Shield AI - Анализ смарт-контракта" class="btn-action">Заказать аудит</a>
+                <div class="price-card vip">
+                    <div class="vip-badge">Best Value</div>
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3 class="card-title">Full Comprehensive Audit</h3>
+                        <div class="meta-info"><strong>Target Audience:</strong> Syndicates and institutional players allocating substantial capital.</div>
+                        <div class="card-desc"><strong>Deliverables:</strong> The complete analytical suite combined into a single intelligence report:</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check-double"></i> 14-Module Due Diligence</li>
+                            <li><i class="fa-solid fa-check-double"></i> Smart Contract Audit</li>
+                            <li><i class="fa-solid fa-check-double"></i> 10-Point Yield Strategy</li>
+                        </ul>
+                        <div class="meta-info" style="margin-bottom:15px;"><strong>Net Savings:</strong> <strong>$28</strong> (instead of $97 itemized)</div>
+                        <div class="formula-box">"Before allocating $1000+ to any asset, assign $69 to a professional independent audit. We save you weeks of research and eliminate hidden risks."</div>
+                    </div>
+                    <div>
+                        <div class="card-price">$69</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Full Comprehensive VIP Audit Inquiry" class="btn-action">Get VIP Package</a>
+                    </div>
                 </div>
-            </div>
-            <!-- Тариф 3 -->
-            <div class="price-card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                    <h3 class="card-title">Анализ механик доходности</h3>
-                    <div class="meta-info"><strong>Для кого:</strong> инвестор, который уже решил войти и хочет выжать максимум с минимальным риском.</div>
-                    <div class="card-desc"><strong>Что получает:</strong> Персональную стратегию по 10 ключевым вопросам:</div>
-                    <ul class="card-list">
-                        <li><i class="fa-solid fa-chevron-right"></i> 1. Стоит ли вообще заходить?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 2. С какой суммы начинать?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 3. На какой срок вкладываться?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 4. Сколько можно реально заработать?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 5. Когда входить?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 6. Какую часть капитала вкладывать?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 7. Когда забирать тело депозита?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 8. Когда выходить полностью?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 9. Какая вероятность успеха?</li>
-                        <li><i class="fa-solid fa-chevron-right"></i> 10. Какие риски не учтены?</li>
-                    </ul>
-                    <div class="card-desc" style="color:#FFF; margin-bottom:0;"><strong>Закрывает вопрос:</strong> «Как именно работать с проектом, чтобы заработать, а не потерять?»</div>
-                </div>
-                <div>
-                    <div class="card-price">$49</div>
-                    <a href="mailto:gebor2011@://gmail.com Shield AI - Анализ механик доходности" class="btn-action">Заказать анализ</a>
-                </div>
-            </div>
-            <!-- Тариф 4 -->
-            <div class="price-card vip">
-                <div class="vip-badge">Выгодно</div>
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
-                    <h3 class="card-title">Полный комплексный аудит</h3>
-                    <div class="meta-info"><strong>Для кого:</strong> серьёзный инвестор, который не хочет рисковать значимой суммой без полной картины.</div>
-                    <div class="card-desc"><strong>Что получает:</strong> Все три продукта в одном пакете:</div>
-                    <ul class="card-list">
-                        <li><i class="fa-solid fa-check-double"></i> Due Diligence по 14 модулям</li>
-                        <li><i class="fa-solid fa-check-double"></i> Анализ смарт-контракта</li>
-                        <li><i class="fa-solid fa-check-double"></i> Стратегия доходности по 10 вопросам</li>
-                    </ul>
-                    <div class="meta-info" style="margin-bottom:15px;"><strong>Экономия:</strong> <strong>$28</strong> (вместо $97 по отдельности)</div>
-                    <div class="formula-box">«Прежде чем инвестировать $1000 в проект — потратьте $69 на полный аудит. Мы сэкономим вам часы исследований и убережём от потери капитала.»</div>
-                </div>
-                <div>
-                    <div class="card-price">$69</div>
-                    <a href="mailto:gebor2011@://gmail.com Shield AI - Полный комплексный аудит" class="btn-action">Получить комплекс</a>
-                </div>
+            </section>
+        </main>
+        <section class="container">
+            <div class="disclaimer-section">
+                <h4>⚖️ DISCLAIMER</h4>
+                <p>The "Capital Shield AI" report constitutes a subjective analytical opinion based on open-source blockchain telemetry and automated data modeling. This information does not constitute financial, investment, or legal advice. Capital Shield AI assumes no liability for fund security or individual investment performance. High-yield alternative assets carry a permanent risk of 100% principal loss. Verify data independently.</p>
             </div>
         </section>
+    </div>
 
-        <!-- Блок связи в Telegram перенесен под тарифы -->
-        <div style="text-align: center; margin: 40px 0; padding: 25px; background: rgba(0, 210, 255, 0.03); border: 1px dashed rgba(0, 210, 255, 0.2); border-radius: 14px;">
-            <p style="font-size: 16px; color: #8E96A7; margin-bottom: 15px;">
-                <i class="fa-brands fa-telegram" style="color: #00D2FF; margin-right: 8px; font-size: 18px;"></i>
-                Возникли вопросы по аудиту или партнерству?
-            </p>
-            <a href="https://t.me/capitalshield_ai" target="_blank" style="color: #00D2FF; font-weight: 700; text-decoration: none; font-size: 18px; border-bottom: 1px dashed #00D2FF; display: inline-block;">
-                За дополнительной информацией обращайтесь в личку Telegram
-            </a>
-        </div>
-    </main>
-
-    <section class="container">
-        <div class="disclaimer-section">
-            <h4>⚖️ ДИСКЛЕЙМЕР</h4>
-            <p>Отчет «Capital Shield AI» является субъективным аналитическим мнением, основанным на данных из открытых источников и алгоритмах ИИ. Данная информация не является финансовым советом или призывом к действию. Мы не несем ответственности за сохранность ваших средств и результаты ваших инвестиций. Помните: в мире криптовалют риск потери 100% капитала существует всегда. Инвестируйте только то, что готовы потерять. Проверяйте факты самостоятельно.</p>
-        </div>
-    </section>
+    <!-- Кнопка Telegram-связи (Общая для обеих версий) -->
+    <div class="container" style="text-align: center; margin: 40px auto; padding: 25px; background: rgba(0, 210, 255, 0.03); border: 1px dashed rgba(0, 210, 255, 0.2); border-radius: 14px; max-width: 1160px;">
+        <p style="font-size: 16px; color: #8E96A7; margin-bottom: 15px;">
+            <i class="fa-brands fa-telegram" style="color: #00D2FF; margin-right: 8px; font-size: 18px;"></i>
+            <span class="txt-tg-q">Возникли вопросы по аудиту или партнерству?</span>
+        </p>
+        <a href="https://t.me" target="_blank" id="txt-tg-link" style="color: #00D2FF; font-weight: 700; text-decoration: none; font-size: 18px; border-bottom: 1px dashed #00D2FF;">
+            За дополнительной информацией обращайтесь в личку Telegram
+        </a>
+    </div>
 
     <footer>
         <div class="container"><p>© 2026 Capital Shield AI. All rights reserved. AI-powered due diligence for serious investors.</p></div>
     </footer>
+
+    <script>
+        function switchLang(lang) {
+            var ruBlock = document.getElementById('block-ru');
+            var enBlock = document.getElementById('block-en');
+            var ruBtn = document.getElementById('lang-ru-btn');
+            var enBtn = document.getElementById('lang-en-btn');
+            var tgQ = document.querySelector('.txt-tg-q');
+            var tgLink = document.getElementById('txt-tg-link');
+            if(lang === 'en') {
+                ruBlock.style.display = 'none'; enBlock.style.display = 'block';
+                enBtn.style.color = '#00D2FF'; enBtn.style.fontWeight = '700';
+                ruBtn.style.color = '#8E96A7'; ruBtn.style.fontWeight = '600';
+                tgQ.textContent = 'Have questions regarding audits or partnership?';
+                tgLink.textContent = 'For additional information, contact us directly via Telegram';
+            } else {
+                ruBlock.style.display = 'block'; enBlock.style.display = 'none';
+                ruBtn.style.color = '#00D2FF'; ruBtn.style.fontWeight = '700';
+                enBtn.style.color = '#8E96A7'; enBtn.style.fontWeight = '600';
+                tgQ.textContent = 'Возникли вопросы по аудиту или партнерству?';
+                tgLink.textContent = 'За дополнительной информацией обращайтесь в личку Telegram';
+            }
+        }
+    </script>
 
     <!-- Встроенный невидимый счетчик Яндекс.Метрики -->
     <script type="text/javascript" >
@@ -223,3 +344,4 @@
     <noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </body>
 </html>
+
