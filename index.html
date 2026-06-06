@@ -22,39 +22,21 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
         header {
-            padding: 60px 0 40px 0;
+            padding: 80px 0 40px 0;
             text-align: center;
             background: radial-gradient(circle at top, rgba(0, 210, 255, 0.12) 0%, transparent 70%);
         }
 
-        .banner-card {
-            width: 100%;
-            max-width: 480px;
-            height: 480px;
-            background-color: #0F111A;
-            border: 2px solid #161A26;
-            border-radius: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 40px auto;
-            position: relative;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.8);
-            background: radial-gradient(circle at center, #1A2235 0%, #0F111A 70%);
-            overflow: hidden;
+        .logo-box {
+            width: 100px; height: 100px; background-color: var(--card-bg); border: 2px solid var(--primary);
+            border-radius: 18px; margin: 0 auto 30px auto; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 30px var(--primary-glow);
         }
+        .logo-box span { font-size: 38px; font-weight: 800; color: var(--text-main); letter-spacing: -1px; }
 
-        .shield-logo {
-            width: 120px; height: 120px; background: #161A26; border: 3px solid #00D2FF;
-            border-radius: 24px; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 0 40px rgba(0, 210, 255, 0.3); margin-bottom: 30px;
-        }
-        .shield-logo span { font-size: 46px; font-weight: 900; color: #F5F6FA; letter-spacing: -2px; }
-
-        .brand-name { font-size: 34px; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #FFFFFF 40%, #00D2FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .brand-slogan { font-size: 14px; color: #8E96A7; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; text-align: center; line-height: 1.4; }
-        .accent-bar { position: absolute; bottom: 30px; font-size: 11px; font-weight: 700; color: #00E676; text-transform: uppercase; letter-spacing: 4px; opacity: 0.6; }
+        h1 { font-size: 54px; font-weight: 800; margin-bottom: 15px; letter-spacing: -1px; background: linear-gradient(135deg, #FFFFFF 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .slogan { font-size: 20px; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; }
+        .tagline { font-size: 24px; color: var(--text-muted); max-width: 850px; margin: 0 auto 50px auto; font-weight: 400; line-height: 1.5; text-align: center; }
 
         .section-title { text-align: center; font-size: 30px; font-weight: 800; margin: 50px 0 40px 0; text-transform: uppercase; letter-spacing: 1px; color: #FFFFFF; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-bottom: 60px; }
@@ -97,29 +79,25 @@
 
         @media (max-width: 992px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) {
-            header { padding: 40px 0 20px 0; } .section-title { font-size: 24px; margin-bottom: 30px; }
-            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            header { padding: 50px 0 30px 0; } h1 { font-size: 36px; } .slogan { font-size: 16px; } .tagline { font-size: 18px; }
+            .section-title { font-size: 24px; margin-bottom: 30px; } .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
             .reputation-banner { padding: 25px; margin: 40px 0; } .reputation-banner h3 { font-size: 20px; } .reputation-banner p { font-size: 14px; }
-            .banner-card { max-width: 100%; height: 380px; } .shield-logo { width: 90px; height: 90px; } .shield-logo span { font-size: 36px; } .brand-name { font-size: 26px; }
         }
     </style>
 </head>
 <body>
 
     <header class="container">
-        <!-- НАШ ВСТРОЕННЫЙ БАННЕР 1:1 -->
-        <div class="banner-card">
-            <div class="shield-logo"><span>CS</span></div>
-            <div class="brand-name">Capital Shield AI</div>
-            <div class="brand-slogan">AI-powered due diligence<br>for serious investors</div>
-            <div class="accent-bar">Shield Active</div>
-        </div>
+        <div class="logo-box"><span>CS</span></div>
+        <h1>Capital Shield AI</h1>
+        <div class="slogan">AI-powered due diligence for serious investors</div>
+        <p class="tagline">Независимое ИИ-моделирование инвестиционных рисков, комплексный технический аудит Web3 и защита репутации крупных игроков.</p>
     </header>
 
     <main class="container">
         <section class="reputation-banner">
             <h3>Интеллектуальная защита вашего капитала.</h3>
-            <p>Capital Shield AI — это уникальный аналитический сервис нового поколения, который полностью меняет правила игры для серьезных инвесторов. Мы помогаем проводить комплексный Due Diligence инвестиционных платформ, сканировать смарт-контракты на скрытые ловушки и моделировать персональную дорожную карту: от безопасной суммы входа до момента экстренной эвакуации прибыли. Защитите свои активы и репутацию на основе точных ИИ-данных до того, как нажмете кнопку «Внести депозит».</p>
+            <p>Capital Shield AI — это unique уникальный аналитический сервис нового поколения, который полностью меняет правила игры для серьезных инвесторов. Мы помогаем проводить комплексный Due Diligence инвестиционных платформ, сканировать смарт-контракты на скрытые ловушки и моделировать персональную дорожную карту: от безопасной суммы входа до момента экстренной эвакуации прибыли. Защитите свои активы и репутацию на основе точных ИИ-данных до того, как нажмете кнопку «Внести депозит».</p>
         </section>
 
         <!-- Кнопка Telegram-связи -->
@@ -209,11 +187,11 @@
                         <li><i class="fa-solid fa-check-double"></i> Стратегия доходности по 10 вопросам</li>
                     </ul>
                     <div class="meta-info" style="margin-bottom:15px;"><strong>Экономия:</strong> <strong>$28</strong> (вместо $97 по отдельности)</div>
-                    <div class="formula-box">«Прежде чем инвестировать $1000 в проект — потратьте $69 на полный аудит. Мы сэкономим вам часы исследований и уберём от потери капитала.»</div>
+                    <div class="formula-box">«Прежде чем инвестировать $1000 в проект — потратьте $69 на полный аудит. Мы сэкономим вам часы исследований и убережём от потери капитала.»</div>
                 </div>
                 <div>
                     <div class="card-price">$69</div>
-                    <a href="mailto:gebor2011@://gmail.com Shield AI - Полный комплексный audit" class="btn-action">Получить комплекс</a>
+                    <a href="mailto:gebor2011@://gmail.com Shield AI - Полный комплексный аудит" class="btn-action">Получить комплекс</a>
                 </div>
             </div>
         </section>
@@ -230,22 +208,12 @@
         <div class="container"><p>© 2026 Capital Shield AI. All rights reserved. AI-powered due diligence for serious investors.</p></div>
     </footer>
 
-    
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109692181', 'ym');
-
-    ym(109692181, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109692181" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-
-</body>
-</html>
+    <!-- Встроенный невидимый счетчик Яндекс.Метрики -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < e.length; j++) {if (e[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://yandex.ru", "ym");
+       ym(97011244, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+    </script>
