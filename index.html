@@ -309,6 +309,7 @@
     </footer>
 
     <script>
+       <script>
         function switchLang(lang) {
             var ruBlock = document.getElementById('block-ru');
             var enBlock = document.getElementById('block-en');
@@ -316,20 +317,31 @@
             var enBtn = document.getElementById('lang-en-btn');
             var tgQ = document.querySelector('.txt-tg-q');
             var tgLink = document.getElementById('txt-tg-link');
+            
+            // Жестко перезаписываем адрес ссылки, чтобы она оставалась активной
+            tgLink.href = "https://t.me/capitalshield_ai";
+
             if(lang === 'en') {
-                ruBlock.style.display = 'none'; enBlock.style.display = 'block';
-                enBtn.style.color = '#00D2FF'; enBtn.style.fontWeight = '700';
-                ruBtn.style.color = '#8E96A7'; ruBtn.style.fontWeight = '600';
+                ruBlock.style.display = 'none'; 
+                enBlock.style.display = 'block';
+                enBtn.style.color = '#00D2FF'; 
+                enBtn.style.fontWeight = '700';
+                ruBtn.style.color = '#8E96A7'; 
+                ruBtn.style.fontWeight = '600';
                 tgQ.textContent = 'Have questions regarding audits or partnership?';
                 tgLink.textContent = 'For additional information, contact us directly via Telegram';
             } else {
-                ruBlock.style.display = 'block'; enBlock.style.display = 'none';
-                ruBtn.style.color = '#00D2FF'; ruBtn.style.fontWeight = '700';
-                enBtn.style.color = '#8E96A7'; enBtn.style.fontWeight = '600';
+                ruBlock.style.display = 'block'; 
+                enBlock.style.display = 'none';
+                ruBtn.style.color = '#00D2FF'; 
+                ruBtn.style.fontWeight = '700';
+                enBtn.style.color = '#8E96A7'; 
+                enBtn.style.fontWeight = '600';
                 tgQ.textContent = 'Возникли вопросы по аудиту или партнерству?';
                 tgLink.textContent = 'За дополнительной информацией обращайтесь в личку Telegram';
             }
         }
+    </script>
     </script>
 
     <!-- Встроенный невидимый счетчик Яндекс.Метрики -->
