@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capital Shield AI — AI-powered due diligence for serious investors</title>
-    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
-            --bg-color: #0F111A; 
+            --bg-color: #0F111A; /* Швейцарский крипто-банк: глубокий графит */
             --card-bg: #161A26;
-            --text-main: #F5F6FA; 
+            --text-main: #F5F6FA; /* Платиновый белый */
             --text-muted: #8E96A7;
-            --primary: #00D2FF; 
-            --primary-glow: rgba(0, 210, 255, 0.2);
-            --accent: #00E676; 
-            --accent-glow: rgba(0, 230, 118, 0.2);
+            --primary: #00D2FF; /* Неоновый синий ИИ */
+            --primary-glow: rgba(0, 210, 255, 0.4);
         }
 
         * {
@@ -29,46 +26,46 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            padding-bottom: 80px;
+            padding-bottom: 60px;
         }
 
         .container {
-            max-width: 1150px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
+            text-align: center;
         }
 
+        /* Блок заголовка */
         header {
-            padding: 80px 0 50px 0;
-            text-align: center;
+            padding: 60px 0 30px 0;
             background: radial-gradient(circle at top, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
-            position: relative;
         }
 
         .logo-box {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             background-color: var(--card-bg);
             border: 2px solid var(--primary);
             border-radius: 16px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 25px auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 30px var(--primary-glow);
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
         }
 
         .logo-box span {
-            font-size: 38px;
+            font-size: 34px;
             font-weight: 800;
             color: var(--text-main);
             letter-spacing: -1px;
         }
 
         h1 {
-            font-size: 54px;
+            font-size: 46px;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             letter-spacing: -1px;
             background: linear-gradient(135deg, #FFFFFF 30%, var(--primary) 100%);
             -webkit-background-clip: text;
@@ -76,207 +73,130 @@
         }
 
         .slogan {
-            font-size: 20px;
+            font-size: 18px;
             color: var(--primary);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
 
-        .tagline {
-            font-size: 24px;
-            color: var(--text-muted);
-            max-width: 850px;
-            margin: 0 auto 50px auto;
-            font-weight: 400;
-            line-height: 1.5;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 800;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
-        }
-
-        .price-card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 40px 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .price-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 35px var(--primary-glow);
-        }
-
-        .price-card.vip {
-            border: 2px solid var(--accent);
-            background: linear-gradient(180deg, #161A26 0%, #13241D 100%);
-            box-shadow: 0 10px 30px var(--accent-glow);
-        }
-
-        .price-card.vip:hover {
-            box-shadow: 0 20px 45px rgba(0, 230, 118, 0.3);
-        }
-
-        .vip-badge {
-            position: absolute;
-            top: -13px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: #0F111A;
-            font-size: 12px;
-            font-weight: 800;
-            padding: 4px 16px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .card-icon {
-            font-size: 42px;
-            color: var(--primary);
-            margin-bottom: 25px;
-        }
-
-        .price-card.vip .card-icon {
-            color: var(--accent);
-        }
-
-        .card-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-desc {
-            font-size: 15px;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 35px;
-            text-align: left;
-        }
-
-        .card-price {
-            font-size: 54px;
-            font-weight: 800;
-            color: #FFFFFF;
-            margin-top: auto;
-            margin-bottom: 30px;
-            letter-spacing: -1px;
-        }
-
-        .btn-action {
-            display: block;
+        /* Универсальный стиль для блока баннера */
+        .banner-block {
             width: 100%;
-            padding: 16px 20px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
-            color: #FFFFFF;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin: 30px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        .price-card:hover .btn-action {
-            background: transparent;
-            border-color: var(--primary);
-            color: var(--primary);
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+        .banner-block img {
+            width: 100%;
+            display: block;
+            height: auto;
         }
 
-        .price-card.vip .btn-action {
-            background: linear-gradient(135deg, var(--accent) 0%, #00C853 100%);
-            border: none;
-            color: #0F111A;
-            box-shadow: 0 5px 20px rgba(0, 230, 118, 0.3);
-        }
-
-        .price-card.vip:hover .btn-action {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0, 230, 118, 0.5);
-        }
-
+        /* Цитата про репутацию */
         .reputation-banner {
             background: linear-gradient(135deg, #161A26 0%, #0F111A 100%);
             border-left: 4px solid var(--primary);
-            padding: 40px;
+            padding: 35px;
             border-radius: 0 16px 16px 0;
             text-align: left;
-            margin: 80px 0;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            margin: 50px 0;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
         }
 
         .reputation-banner h3 {
-            font-size: 28px;
+            font-size: 24px;
             color: #FFFFFF;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 800;
         }
 
         .reputation-banner p {
             color: var(--text-muted);
-            font-size: 18px;
+            font-size: 17px;
+        }
+
+        /* Главная кнопка действия */
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0 60px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: 100%;
+            max-width: 460px;
+            color: #0F111A;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, var(--primary) 0%, #0099FF 100%);
+            box-shadow: 0 6px 25px var(--primary-glow);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 210, 255, 0.5);
+            background: linear-gradient(135deg, #00E676 0%, #00C853 100%);
+        }
+
+        /* Секция Дисклеймера */
+        .disclaimer-section {
+            background-color: rgba(22, 26, 38, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            border-radius: 14px;
+            padding: 25px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .disclaimer-section h4 {
+            font-size: 15px;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .disclaimer-section p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
         }
 
         footer {
-            padding: 60px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
         }
 
         footer p {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        footer span {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.15);
-            max-width: 800px;
-            display: block;
-            margin: 0 auto;
         }
 
         @media (max-width: 768px) {
-            header { padding: 50px 0 30px 0; }
-            h1 { font-size: 36px; }
-            .slogan { font-size: 16px; }
-            .tagline { font-size: 18px; margin-bottom: 30px; }
-            .section-title { font-size: 24px; margin-bottom: 30px; }
-            .pricing-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
-            .reputation-banner { padding: 25px; margin: 50px 0; }
-            .reputation-banner h3 { font-size: 22px; }
+            h1 { font-size: 34px; }
+            .slogan { font-size: 15px; margin-bottom: 25px; }
+            .btn { font-size: 18px; max-width: 100%; }
+            .reputation-banner { padding: 25px; }
+            .reputation-banner h3 { font-size: 20px; }
             .reputation-banner p { font-size: 15px; }
         }
     </style>
@@ -289,33 +209,41 @@
         </div>
         <h1>Capital Shield AI</h1>
         <div class="slogan">AI-powered due diligence for serious investors</div>
-        <p class="tagline">Независимое ИИ-моделирование инвестиционных рисков, комплексный технический аудит Web3 и защита репутации крупных игроков.</p>
     </header>
 
     <main class="container">
 
+        <!-- Продающий репутационный блок -->
         <section class="reputation-banner">
             <h3>Ваша репутация дороже любой рефералки.</h3>
             <p>Один случайный скам проекта навсегда уничтожает доверие вашей команды. Наш искусственный интеллект проводит глубокий препарирующий анализ активов, вычисляя кассовые разрывы до того, как вы нажмете кнопку «Внести депозит».</p>
         </section>
 
-        <h2 class="section-title">Тарифные планы консалтинга</h2>
-        
-        <section class="pricing-grid">
-            
-            <!-- Продукт 1 -->
-            <div class="price-card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3 class="card-title">Анализ смарт-контракта</h3>
-                    <p class="card-desc">Глубокое техническое сканирование исходного кода Web3 на скрытые уязвимости, вредоносные функции выпуска токенов (Mint), запрета продаж (Honeypot) и сверка таймлоков блокировки ликвидности.</p>
-                </div>
-                <div>
-                    <div class="card-price">$19</div>
-                    <a href="https://t.me" target="_blank" class="btn-action">Заказать аудит</a>
-                </div>
-            </div>
+        <!-- Ваш новый тарифный баннер о продуктах (16:9) -->
+        <div class="banner-block">
+            <img src="banner_tariffs.png" alt="Тарифные планы Capital Shield AI">
+        </div>
 
-            <!-- Продукт 2 -->
-            <div class="price-card">
-                <div>
+        <!-- Одна мощная кнопка перехода в бота строго под баннером -->
+        <div class="cta-group">
+            <a href="https://t.me" target="_blank" class="btn">
+                Подать заявку на аудит
+            </a>
+        </div>
+
+        <!-- Утвержденный жесткий дисклеймер -->
+        <section class="disclaimer-section">
+            <h4>⚖️ ДИСКЛЕЙМЕР</h4>
+            <p>Отчет «Capital Shield AI» является субъективным аналитическим мнением, основанным на данных из открытых источников и алгоритмах ИИ. Данная информация не является financial финансовым советом или призывом к действию. Мы не несем ответственности за сохранность ваших средств и результаты ваших инвестиций. Помните: в мире криптовалют риск потери 100% капитала существует всегда. Инвестируйте только то, что готовы потерять. Проверяйте факты самостоятельно.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Capital Shield AI. All rights reserved. AI-powered due diligence for serious investors.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
