@@ -305,6 +305,36 @@
     </div>
 
     <footer>
+        html    <script>
+        function switchLang(lang) {
+            var ruBlock = document.getElementById('block-ru');
+            var enBlock = document.getElementById('block-en');
+            var ruBtn = document.getElementById('lang-ru-btn');
+            var enBtn = document.getElementById('lang-en-btn');
+            var tgQ = document.querySelector('.txt-tg-q');
+            var tgLink = document.getElementById('txt-tg-link');
+            
+            if (tgLink) {
+                tgLink.href = "https://t.me";
+            }
+
+            if(lang === 'en') {
+                if(ruBlock) ruBlock.style.display = 'none';
+                if(enBlock) enBlock.style.display = 'block';
+                if(enBtn) { enBtn.style.color = '#00D2FF'; enBtn.style.fontWeight = '700'; }
+                if(ruBtn) { ruBtn.style.color = '#8E96A7'; ruBtn.style.fontWeight = '600'; }
+                if(tgQ) tgQ.textContent = 'Have questions regarding audits or partnership?';
+                if(tgLink) tgLink.textContent = 'For additional information, contact us directly via Telegram';
+            } else {
+                if(ruBlock) ruBlock.style.display = 'block';
+                if(enBlock) enBlock.style.display = 'none';
+                if(ruBtn) { ruBtn.style.color = '#00D2FF'; ruBtn.style.fontWeight = '700'; }
+                if(enBtn) { enBtn.style.color = '#8E96A7'; enBtn.style.fontWeight = '600'; }
+                if(tgQ) tgQ.textContent = 'Возникли вопросы по аудиту или партнерству?';
+                if(tgLink) tgLink.textContent = 'За дополнительной информацией обращайтесь в личку Telegram';
+            }
+        }
+    </script>
         <div class="container"><p>© 2026 Capital Shield AI. All rights reserved. AI-powered due diligence for serious investors.</p></div>
     </footer>
 
