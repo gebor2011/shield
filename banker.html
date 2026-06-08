@@ -25,24 +25,22 @@
             max-width: 1000px;
             width: 100%;
             background: #0B0E17;
-            border-radius: 32px;
+            border-radius: 28px;
             padding: 32px;
             border: 1px solid #3A4050;
-            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5);
         }
 
-        /* Шапка */
         .header {
             text-align: center;
-            margin-bottom: 32px;
+            margin-bottom: 20px;
         }
 
         .logo h1 {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 700;
             letter-spacing: 1px;
             color: #E8EDF5;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .logo p {
@@ -50,20 +48,28 @@
             color: #9CA3AF;
         }
 
-        /* Герой */
+        .badge-time {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            color: #9CA3AF;
+            background: #12161F;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            border: 1px solid #3A4050;
+            margin-top: 16px;
+        }
+
         .hero {
             text-align: center;
-            margin-bottom: 32px;
-            padding: 20px 0;
-            border-top: 1px solid #3A4050;
-            border-bottom: 1px solid #3A4050;
+            margin: 28px 0 20px;
         }
 
         .hero h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             color: #E8EDF5;
-            margin-bottom: 16px;
             line-height: 1.3;
         }
 
@@ -77,10 +83,9 @@
         .hero-sub {
             font-size: 14px;
             color: #9CA3AF;
-            margin-top: 16px;
+            margin-top: 14px;
         }
 
-        /* Две колонки */
         .compare {
             display: flex;
             gap: 24px;
@@ -96,18 +101,18 @@
             border: 1px solid #3A4050;
         }
 
-        .card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 16px;
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
             color: #E8EDF5;
+            margin-bottom: 12px;
         }
 
         .card-price {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             color: #E8EDF5;
-            margin: 12px 0;
+            margin: 8px 0 4px;
         }
 
         .card-time {
@@ -126,7 +131,7 @@
             font-size: 13px;
             padding: 8px 0;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
             border-bottom: 1px solid #2A2F3F;
             color: #D1D5DB;
@@ -135,10 +140,7 @@
         .check {
             color: #9CA3AF;
             font-weight: 600;
-        }
-
-        .cross {
-            color: #6B7280;
+            min-width: 20px;
         }
 
         .vs {
@@ -156,8 +158,8 @@
             border: 1px solid #3A4050;
         }
 
-        .badge-graphite {
-            background: rgba(58, 64, 80, 0.3);
+        .full-badge {
+            background: rgba(58, 64, 80, 0.4);
             color: #E8EDF5;
             border-radius: 30px;
             padding: 6px 14px;
@@ -219,45 +221,39 @@
 </head>
 <body>
 <div class="banner">
-    <!-- Шапка -->
     <div class="header">
         <div class="logo">
             <h1>CAPITAL SHIELD AI</h1>
             <p>AI-powered due diligence for serious investors</p>
         </div>
+        <div class="badge-time">14 модулей · 24-48 часов</div>
     </div>
 
-    <!-- Герой -->
     <div class="hero">
         <h2>CertiK проверяет <span style="opacity:0.6;">код</span>.<br>Мы проверяем <span class="hero-highlight">проект</span>.</h2>
         <div class="hero-sub">Бизнес-модель · Команда · Деньги · Эндшпиль</div>
     </div>
 
-    <!-- Две колонки -->
     <div class="compare">
-        <!-- CertiK -->
         <div class="card">
-            <h3>CertiK</h3>
+            <div class="card-title">CertiK</div>
             <div class="card-price">$15 000 – $500 000+</div>
-            <div class="card-time">⏱ 2–6 недель</div>
+            <div class="card-time">⏱ 2-6 недель</div>
             <ul class="features">
                 <li><span class="check">✓</span> Аудит смарт-контракта</li>
                 <li><span class="check">✓</span> Технические уязвимости</li>
-                <li><span class="cross">✗</span> Бизнес-модель и математика</li>
-                <li><span class="cross">✗</span> Бэкграунд команды (OSINT)</li>
-                <li><span class="cross">✗</span> Денежный след и эндшпиль</li>
+                <li><span class="check">✗</span> Бизнес-модель и математика</li>
+                <li><span class="check">✗</span> Бэкграунд команды (OSINT)</li>
+                <li><span class="check">✗</span> Денежный след и эндшпиль</li>
             </ul>
         </div>
+                <div class="vs">VS</div>
 
-        <!-- Разделитель -->
-        <div class="vs">VS</div>
-
-        <!-- Capital Shield AI -->
         <div class="card">
-            <div class="badge-graphite">💎 ПОЛНЫЙ КОМПЛЕКСНЫЙ АУДИТ</div>
-            <h3>Capital Shield AI</h3>
+            <div class="full-badge">💎 ПОЛНЫЙ КОМПЛЕКСНЫЙ АУДИТ</div>
+            <div class="card-title">Capital Shield AI</div>
             <div class="card-price">$19 – $69</div>
-            <div class="card-time">⏱ 24–48 часов</div>
+            <div class="card-time">⏱ 24-48 часов</div>
             <ul class="features">
                 <li><span class="check">✓</span> OSINT · юридика · команда</li>
                 <li><span class="check">✓</span> Математика пирамиды · день X</li>
@@ -268,7 +264,6 @@
         </div>
     </div>
 
-    <!-- Кнопка и ссылка -->
     <div style="text-align: center;">
         <a href="https://gebor2011.github.io/shield/" class="btn">🛡 ПРОВЕРИТЬ ПРОЕКТ →</a>
     </div>
