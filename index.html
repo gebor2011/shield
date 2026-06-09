@@ -41,30 +41,22 @@
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
         .price-card { background-color: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 35px 22px; text-align: left; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
         .price-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 15px 35px var(--primary-glow); }
-        .price-card.vip { border: 2px solid var(--accent); background: linear-gradient(180deg, #161A26 0%, #11221A 100%); box-shadow: 0 10px 30px var(--accent-glow); }
-        .price-card.vip:hover { box-shadow: 0 20px 45px rgba(0, 230, 118, 0.25); }
 
-        .vip-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #0F111A; font-size: 12px; font-weight: 800; padding: 4px 18px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
         .card-icon { font-size: 36px; color: var(--primary); margin-bottom: 20px; text-align: center; }
-        .price-card.vip .card-icon { color: var(--accent); }
         .card-title { font-size: 20px; font-weight: 700; color: #FFFFFF; margin-bottom: 15px; min-height: 56px; display: flex; align-items: center; justify-content: center; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 15px; }
 
         .meta-info { font-size: 14px; margin-bottom: 12px; color: var(--text-main); line-height: 1.4; }
         .meta-info strong { color: var(--primary); }
-        .price-card.vip .meta-info strong { color: var(--accent); }
         .card-desc { font-size: 14px; color: var(--text-muted); line-height: 1.5; margin-bottom: 15px; }
         .card-list { list-style: none; margin-bottom: 20px; }
         .card-list li { font-size: 13.5px; color: var(--text-main); margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
         .card-list li i { color: var(--primary); margin-top: 3px; font-size: 11px; }
-        .price-card.vip .card-list li i { color: var(--accent); }
 
-        .formula-box { background: rgba(255, 255, 255, 0.03); border-radius: 10px; padding: 15px; font-size: 13px; color: #FFFFFF; border-left: 3px solid var(--accent); margin-bottom: 20px; font-style: italic; line-height: 1.4; }
+        .formula-box { background: rgba(255, 255, 255, 0.03); border-radius: 10px; padding: 15px; font-size: 13px; color: #FFFFFF; border-left: 3px solid var(--primary); margin-bottom: 20px; font-style: italic; line-height: 1.4; }
         .card-price { font-size: 48px; font-weight: 800; color: #FFFFFF; margin-top: auto; margin-bottom: 20px; text-align: center; letter-spacing: -1px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 15px; }
         
         .btn-action { display: block; width: 100%; padding: 15px 20px; font-size: 15px; font-weight: 700; text-decoration: none; color: #FFFFFF; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px; text-align: center; }
         .price-card:hover .btn-action { background: transparent; border-color: var(--primary); color: var(--primary); box-shadow: 0 0 15px rgba(0, 210, 255, 0.2); }
-        .price-card.vip .btn-action { background: linear-gradient(135deg, var(--accent) 0%, #00C853 100%); border: none; color: #0F111A; box-shadow: 0 5px 20px rgba(0, 230, 118, 0.3); }
-        .price-card.vip:hover .btn-action { transform: scale(1.02); box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4); }
 
         .reputation-banner { background: linear-gradient(135deg, #161A26 0%, #0F111A 100%); border-left: 4px solid var(--primary); padding: 40px; border-radius: 0 16px 16px 0; text-align: left; margin: 40px 0 60px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
         .reputation-banner h3 { font-size: 26px; color: #FFFFFF; margin-bottom: 12px; font-weight: 800; }
@@ -109,7 +101,7 @@
             <h2 class="section-title">Тарифные планы консалтинга</h2>
             <section class="pricing-grid">
                 
-                <!-- Продукт 1 (Для сетевых) -->
+                <!-- Продукт 1 -->
                 <div class="price-card">
                     <div>
                         <div class="card-icon"><i class="fa-solid fa-users"></i></div>
@@ -124,7 +116,7 @@
                     </div>
                 </div>
 
-                <!-- Продукт 2 (Смарт-контракт) -->
+                <!-- Продукт 2 -->
                 <div class="price-card">
                     <div>
                         <div class="card-icon"><i class="fa-solid fa-code"></i></div>
@@ -144,12 +136,11 @@
                         <a href="mailto:gebor2011@://gmail.com Shield AI - Анализ смарт-контракта ($20)" class="btn-action">Заказать аудит</a>
                     </div>
                 </div>
-                <!-- Продукт 3 (Полный аудит) -->
-                <div class="price-card vip">
-                    <div class="vip-badge">Выгодно</div>
+                <!-- Продукт 3 -->
+                <div class="price-card">
                     <div>
                         <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
-                        <h3 class="card-title">Полный комплексный аудит</h3>
+                        <h3 class="card-title">Аудит инвест проектов</h3>
                         <div class="meta-info"><strong>Для кого:</strong> серьёзный инвестор, который не хочет рисковать значимой суммой без полной картины.</div>
                         <div class="card-desc"><strong>Что получает:</strong> Все продукты в одном едином синергетическом отчете под ключ:</div>
                         <ul class="card-list">
@@ -157,14 +148,13 @@
                             <li><i class="fa-solid fa-check-double"></i> Полный технический анализ смарт-контракта</li>
                             <li><i class="fa-solid fa-check-double"></i> Чёткий цветовой вердикт рисков 🔴🟠🟡🟢🔵</li>
                         </ul>
-                        <div class="meta-info" style="margin-bottom:15px;"><strong>Экономия:</strong> <strong>$10</strong> (вместо $30 по отдельности)</div>
                         <div class="formula-box">
-                            «Прежде чем инвестировать стартовый капитал в проект — направьте $40 на полный аудит. Мы сэкономим вам часы личных исследований, покажем то, о чём молчит CertiK, и убережём от скрытых капканов».
+                            «Прежде чем инвестировать стартовый капитал в проект — направьте $30 на полный аудит. Мы сэкономим вам часы личных исследований, покажем то, о чём молчит CertiK, и убережём от скрытых капканов».
                         </div>
                     </div>
                     <div>
-                        <div class="card-price">$40</div>
-                        <a href="mailto:gebor2011@://gmail.com Shield AI - Полный комплексный аудит ($40)" class="btn-action">Получить комплекс</a>
+                        <div class="card-price">$30</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Аудит инвест проектов ($30)" class="btn-action">Заказать аудит</a>
                     </div>
                 </div>
 
@@ -172,7 +162,7 @@
         </main>
         <section class="container">
             <div class="disclaimer-section">
-                <h4>⚖️ ДИСКЛЕИМЕР</h4>
+                <h4>⚖️ ДИСКЛЕЙМЕР</h4>
                 <p>Отчет «Capital Shield AI» является субъективным аналитическим мнением, основанным на данных из открытых источников и алгоритмах ИИ. Данная информация не является финансовым советом или призывом к действию. Мы не несем ответственности за сохранность ваших средств и результаты ваших инвестиций. Помните: в мире криптовалют риск потери 100% капитала существует всегда. Инвестируйте только то, что готовы потерять. Проверяйте факты самостоятельно.</p>
             </div>
         </section>
@@ -228,11 +218,10 @@
                     </div>
                 </div>
 
-                <div class="price-card vip">
-                    <div class="vip-badge">Best Value</div>
+                <div class="price-card">
                     <div>
                         <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
-                        <h3 class="card-title">Full Comprehensive Audit</h3>
+                        <h3 class="card-title">Investment Projects Audit</h3>
                         <div class="meta-info"><strong>Target Audience:</strong> Investors allocating capital who demand a definitive, untampered bird's-eye risk model.</div>
                         <div class="card-desc"><strong>Deliverables:</strong> The complete analytical intelligence suite merged into a single comprehensive report:</div>
                         <ul class="card-list">
@@ -240,14 +229,13 @@
                             <li><i class="fa-solid fa-check-double"></i> Full Technical Smart Contract Backend Vulnerability Scan</li>
                             <li><i class="fa-solid fa-check-double"></i> Definitive Visual Risk Horizontals Verdict 🔴🟠🟡🟢🔵</li>
                         </ul>
-                        <div class="meta-info" style="margin-bottom:15px;"><strong>Net Savings:</strong> <strong>$10</strong> (instead of $30 itemized)</div>
                         <div class="formula-box">
-                            "Before deploying your initial capital into any repository, assign $40 to a professional audit. We save you weeks of research, expose everything CertiK ignores, and protect you from hidden pitfalls."
+                            "Before deploying your initial capital into any repository, assign $30 to a professional audit. We save you weeks of research, expose everything CertiK ignores, and protect you from hidden pitfalls."
                         </div>
                     </div>
                     <div>
-                        <div class="card-price">$40</div>
-                        <a href="mailto:gebor2011@://gmail.com Shield AI - Full Comprehensive VIP Audit ($40)" class="btn-action">Get VIP Package</a>
+                        <div class="card-price">$30</div>
+                        <a href="mailto:gebor2011@://gmail.com Shield AI - Investment Projects Audit ($30)" class="btn-action">Order Audit</a>
                     </div>
                 </div>
 
@@ -261,7 +249,7 @@
         </section>
     </div>
 
-    <!-- Кнопка Telegram-связи (Общая для обеих версий) -->
+    <!-- Кнопка Telegram-связи (Полностью автономная версия) -->
     <div class="container" style="text-align: center; margin: 40px auto; padding: 25px; background: rgba(0, 210, 255, 0.03); border: 1px dashed rgba(0, 210, 255, 0.2); border-radius: 14px; max-width: 1160px; position: relative; z-index: 9999;">
         <p style="font-size: 16px; color: #8E96A7; margin-bottom: 15px;">
             <i class="fa-brands fa-telegram" style="color: #00D2FF; margin-right: 8px; font-size: 18px;"></i>
