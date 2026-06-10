@@ -63,7 +63,7 @@
         .disclaimer-section p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
         footer { padding: 40px 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.02); margin-top: 40px; }
         footer p { font-size: 14px; color: var(--text-muted); }
-        /* Стили для новой трехколоночной секции на месте старого баннера */
+/* Адаптивные стили для 3 колонок */
         .info-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 40px 0 60px 0; }
         .info-col-3 { background-color: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 30px 22px; text-align: left; transition: all 0.3s ease; display: flex; flex-direction: column; }
         .info-col-3:hover { border-color: var(--primary); box-shadow: 0 15px 35px var(--primary-glow); }
@@ -73,7 +73,6 @@
         .info-col-list { list-style: none; }
         .info-col-list li { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; position: relative; padding-left: 15px; }
         .info-col-list li::before { content: "•"; color: var(--primary); position: absolute; left: 0; font-size: 16px; top: -2px; }
-        .info-col-list li strong { color: #FFFFFF; display: inline; }
 
         @media (max-width: 992px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } .info-grid-3 { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
@@ -83,13 +82,14 @@
     </style>
 </head>
 <body>
-     <!-- Переключатель языков -->
+
+    <!-- Языковой селектор -->
     <div style="text-align: right; padding: 15px 20px; max-width: 1200px; margin: 0 auto; font-size: 14px; position: relative; z-index: 9999;">
         <span id="lang-ru-btn" onclick="switchLang('ru')" style="color: #00D2FF; cursor: pointer; margin-right: 15px; font-weight: 700;">RU</span>
         <span id="lang-en-btn" onclick="switchLang('en')" style="color: #8E96A7; cursor: pointer; font-weight: 600;">EN</span>
     </div>
 
-    <!-- РУССКАЯ ВЕРСИЯ САЙТА -->
+    <!-- РУССКИЙ БЛОК -->
     <div id="block-ru">
         <header class="container">
             <div class="logo-box"><span>CS</span></div>
@@ -98,7 +98,6 @@
         </header>
 
         <main class="container">
-            <!-- СЕКЦИЯ: 3 НОВЫХ МОДУЛЯ (РУССКАЯ) -->
             <section class="info-grid-3">
                 <div class="info-col-3">
                     <h3 class="info-col-title"><i class="fa-solid fa-circle-info"></i> О сервисе</h3>
@@ -119,7 +118,7 @@
                     </ul>
                 </div>
             </section>
-            <!-- ДОПОЛНЕНИЕ К ОТЧЕТАМ (РУССКАЯ ВЕРСИЯ) -->
+
             <section class="info-grid-3" style="margin-top: -40px;">
                 <div class="info-col-3">
                     <ul class="info-col-list" style="margin: 0;">
@@ -138,8 +137,7 @@
                     </ul>
                 </div>
             </section>
-
-            <h2 class="section-title">Тарифные планы </h2>
+<h2 class="section-title">Тарифные планы </h2>
             <section class="pricing-grid">
                 <!-- Продукт 1 -->
                 <div class="price-card">
@@ -149,14 +147,14 @@
                         <div class="meta-info"><strong>Для кого:</strong> инвестор, который нашёл сетевой или краудфандинговый проект.</div>
                         <div class="card-desc">Глубокий анализ устойчивости финансовой модели, маркетинговых рисков и реального притока ликвидности.</div>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Поиск математических дефицитов</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Оценка скрытых барьеров выплат</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> ИИ-анализ накрутки соцсетей</li>
+                            <li><i class="fa-solid fa-check"></i> Поиск математических дефицитов</li>
+                            <li><i class="fa-solid fa-check"></i> Оценка скрытых барьеров выплат</li>
+                            <li><i class="fa-solid fa-check"></i> ИИ-анализ накрутки соцсетей</li>
                         </ul>
                         <div class="formula-box">Формула безопасного входа: ИИ рассчитывает объем депозита и срок эвакуации прибыли.</div>
                     </div>
                     <div>
-                        <div class="card-price">150 $</div>
+                        <div class="card-price">10 $</div>
                         <a href="https://t.me" class="btn-action">Заказать аудит</a>
                     </div>
                 </div>
@@ -165,18 +163,18 @@
                 <div class="price-card">
                     <div>
                         <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-                        <h3 class="card-title">Технический audit смарт-контрактов</h3>
+                        <h3 class="card-title">Технический аудит смарт-контрактов</h3>
                         <div class="meta-info"><strong>Для кого:</strong> инвесторы в Web3, DeFi проекты и новые токены.</div>
                         <div class="card-desc">Автоматизированное и экспертное сканирование исходного кода блокчейн-контрактов на уязвимости.</div>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Проверка функций заморозки</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Поиск скрытых бэкдоров (Backdoors)</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Анализ скрытых комиссий при продаже</li>
+                            <li><i class="fa-solid fa-check"></i> Поиск скрытых бэкдоров (Backdoors)</li>
+                            <li><i class="fa-solid fa-check"></i> Проверка функций заморозки</li>
+                            <li><i class="fa-solid fa-check"></i> Анализ скрытых комиссий при продаже</li>
                         </ul>
                         <div class="formula-box">Полная деконструкция логики смарт-контракта: выявление скрытых уязвимостей до деплоя капитала.</div>
                     </div>
                     <div>
-                        <div class="card-price">250 $</div>
+                        <div class="card-price">20 $</div>
                         <a href="https://t.me" class="btn-action">Заказать аудит</a>
                     </div>
                 </div>
@@ -189,14 +187,14 @@
                         <div class="meta-info"><strong>Для кого:</strong> крупные инвесторы, лидеры команд и инвест-пулы.</div>
                         <div class="card-desc">Максимальная проверка: экономика + аудит кода + юридический/репутационный анализ бэкграунда создателей.</div>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Все проверки Тарифов 1 и 2</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Стресс-тестирование кассового разрыва</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Персональная стратегическая сессия</li>
+                            <li><i class="fa-solid fa-check"></i> Все проверки Тарифов 1 и 2</li>
+                            <li><i class="fa-solid fa-check"></i> Стресс-тестирование кассового разрыва</li>
+                            <li><i class="fa-solid fa-check"></i> Персональная стратегическая сессия</li>
                         </ul>
                         <div class="formula-box">Развернутая ИИ-карта управления рисками: ультимативный щит для вашего капитала и репутации.</div>
                     </div>
                     <div>
-                        <div class="card-price">350 $</div>
+                        <div class="card-price">30 $</div>
                         <a href="https://t.me" class="btn-action">Заказать Due Diligence</a>
                     </div>
                 </div>
@@ -209,8 +207,42 @@
                 <p>Отчет "Capital Shield AI" представляет собой субъективное аналитическое мнение, основанное на открытых данных телеметрии блокчейна и автоматизированном моделировании. Эта информация не является финансовым, инвестиционным или юридическим советом. Capital Shield AI не несет ответственности за сохранность средств или результаты индивидуальных инвестиций. Альтернативные активы несут постоянный риск 100% потери капитала. Проверяйте данные самостоятельно.</p>
             </div>
         </section>
+
+        <!-- ЧИСТЫЙ РУССКИЙ БЛОК ФРАНШИЗЫ ВНУТРИ BLOCK-RU -->
+        <section class="container" style="margin-top: 48px; margin-bottom: 32px;">
+            <div style="background: #0F111A; border-radius: 24px; padding: 32px; border: 1px solid #2A2F3F;">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <span style="background: #1A1F2C; color: #9CA3AF; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 30px;">🔥 ФРАНЧАЙЗИ</span>
+                </div>
+                <h2 style="font-size: 26px; font-weight: 700; color: #E8EDF5; text-align: center; margin-bottom: 16px;">Стать партнёром – Франчайзи Capital Shield AI</h2>
+                <p style="font-size: 16px; color: #9CA3AF; text-align: center; max-width: 700px; margin: 0 auto 32px auto;">Зарабатывайте на IT-аудите проектов. <strong style="color: #E8EDF5;">Без вложений.</strong></p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 32px;">
+                    <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">💵</div>
+                        <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">0 ₽ вложений</div>
+                        <div style="font-size: 13px; color: #9CA3AF;">Никаких лицензий. Никакого стартового капитала.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">💰</div>
+                        <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Свободная цена</div>
+                        <div style="font-size: 13px; color: #9CA3AF;">Ставите свою наценку — забираете 100% разницы сразу.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
+                        <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Моментальный доход</div>
+                        <div style="font-size: 13px; color: #9CA3AF;">Клиент платит вам → вы заказываете аудит у нас → остальное — ваш доход.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <p style="font-size: 14px; color: #9CA3AF; margin-bottom: 16px;">Присоединяйтесь к CAPITAL SHIELD AI — единственному в рунете ИИ-сервису специального аудита сетевых проектов и смарт-контрактов.</p>
+                    <a href="https://t.me" style="display: inline-block; background: #1A1F2C; border: 1px solid #3A4050; color: #E8EDF5; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: 0.2s;" onmouseover="this.style.background='#2A2F3F'; this.style.borderColor='#9CA3AF';" onmouseout="this.style.background='#1A1F2C'; this.style.borderColor='#3A4050';">👉 Подать заявку: написать «Франшиза»</a>
+                </div>
+            </div>
+        </section>
     </div>
-    <!-- ENGLISH VERSION OF THE WEBSITE -->
+<!-- ENGLISH VERSION OF THE WEBSITE -->
     <div id="block-en" style="display: none;">
         <header class="container">
             <div class="logo-box"><span>CS</span></div>
@@ -270,14 +302,14 @@
                         <div class="meta-info"><strong>Target Audience:</strong> Investors who discovered a network or crowdfunding platform.</div>
                         <div class="card-desc">Deep stability analysis of the financial model, marketing risks, and real liquidity inflows.</div>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Mathematical deficit detection</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Payout barrier assessment</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> AI social media bot analysis</li>
+                            <li><i class="fa-solid fa-check"></i> Mathematical deficit detection</li>
+                            <li><i class="fa-solid fa-check"></i> Payout barrier assessment</li>
+                            <li><i class="fa-solid fa-check"></i> AI social media bot analysis</li>
                         </ul>
                         <div class="formula-box">Safe entry formula: AI calculates optimal deposit sizes and profit evacuation timelines.</div>
                     </div>
                     <div>
-                        <div class="card-price">150 $</div>
+                        <div class="card-price">10 $</div>
                         <a href="https://t.me" class="btn-action">Order Audit</a>
                     </div>
                 </div>
@@ -290,14 +322,14 @@
                         <div class="meta-info"><strong>Target Audience:</strong> Investors in Web3, DeFi projects, and new tokens.</div>
                         <div class="card-desc">Automated and expert scanning of blockchain source code to find dangerous vulnerabilities.</div>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Freeze functions verification</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Hidden backdoor detection</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Sell fee and honeypot analysis</li>
+                            <li><i class="fa-solid fa-check"></i> Freeze functions verification</li>
+                            <li><i class="fa-solid fa-check"></i> Hidden backdoor detection</li>
+                            <li><i class="fa-solid fa-check"></i> Sell fee and honeypot analysis</li>
                         </ul>
                         <div class="formula-box">Complete smart contract deconstruction: revealing hidden critical exploits before deploying capital.</div>
                     </div>
                     <div>
-                        <div class="card-price">250 $</div>
+                        <div class="card-price">20 $</div>
                         <a href="https://t.me" class="btn-action">Order Audit</a>
                     </div>
                 </div>
@@ -310,14 +342,14 @@
                         <div class="meta-info"><strong>Target Audience:</strong> Large investors, team leaders, and investment pools.</div>
                         <div class="card-desc">Maximum check: economics + code audit + legal and reputational background checks on founders.</div>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> All features from Plans 1 and 2</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Cash gap stress-testing</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 8px;"></i> Personal strategy session</li>
+                            <li><i class="fa-solid fa-check"></i> All features from Plans 1 and 2</li>
+                            <li><i class="fa-solid fa-check"></i> Cash gap stress-testing</li>
+                            <li><i class="fa-solid fa-check"></i> Personal strategy session</li>
                         </ul>
                         <div class="formula-box">Comprehensive AI risk management map: an ultimate shield for your capital and reputation.</div>
                     </div>
                     <div>
-                        <div class="card-price">350 $</div>
+                        <div class="card-price">30 $</div>
                         <a href="https://t.me" class="btn-action">Order Due Diligence</a>
                     </div>
                 </div>
@@ -330,40 +362,174 @@
                 <p>The "Capital Shield AI" report constitutes a subjective analytical opinion based on open-source blockchain telemetry and automated data modeling. This information does not constitute financial, investment, or legal advice. Capital Shield AI assumes no liability for fund security or individual investment performance. Alternative assets carry a permanent risk of 100% principal loss. Verify data independently.</p>
             </div>
         </section>
+
+        <!-- CLEAN ENGLISH FRANCHISE BLOCK INSIDE BLOCK-EN -->
+        <section class="container" style="margin-top: 48px; margin-bottom: 32px;">
+            <div style="background: #0F111A; border-radius: 24px; padding: 32px; border: 1px solid #2A2F3F;">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <span style="background: #1A1F2C; color: #9CA3AF; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 30px;">🔥 FRANCHISE</span>
+                </div>
+                <h2 style="font-size: 26px; font-weight: 700; color: #E8EDF5; text-align: center; margin-bottom: 16px;">Become a Partner – Capital Shield AI Franchise</h2>
+                <p style="font-size: 16px; color: #9CA3AF; text-align: center; max-width: 700px; margin: 0 auto 32px auto;">Earn on IT audits of various projects. <strong style="color: #E8EDF5;">No investment required.</strong></p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 32px;">
+                    <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">💵</div>
+<!-- ENGLISH VERSION OF THE WEBSITE -->
+    <div id="block-en" style="display: none;">
+        <header class="container">
+            <div class="logo-box"><span>CS</span></div>
+            <h1>Capital Shield AI</h1>
+            <div class="slogan">AI-powered due diligence for serious investors</div>
+        </header>
+
+        <main class="container">
+            <!-- SECTION: INFORMATION COLUMNS (ENGLISH) -->
+            <section class="info-grid-3">
+                <div class="info-col-3">
+                    <h3 class="info-col-title"><i class="fa-solid fa-circle-info"></i> About Service</h3>
+                    <p class="info-col-intro">In the world of crypto and network projects, taking someone's word is the fastest way to lose everything. Capital Shield AI is designed for those who want to know the absolute truth about a project.</p>
+                </div>
+                <div class="info-col-3">
+                    <h3 class="info-col-title"><i class="fa-solid fa-users"></i> Who Needs It</h3>
+                    <ul class="info-col-list">
+                        <li><strong>For Investors:</strong> to protect your capital from hidden bugs and sudden exit scams.</li>
+                        <li><strong>For Bloggers & Leaders:</strong> Your reputation is worth more than any referral fees. Don't invite people into projects that will close tomorrow.</li>
+                        <li><strong>For Crypto Beginners:</strong> If you don't know how to read smart contract code yourself — Capital Shield AI will do it for you.</li>
+                    </ul>
+                </div>
+                <div class="info-col-3">
+                    <h3 class="info-col-title"><i class="fa-solid fa-file-shield"></i> What's in the Reports</h3>
+                    <ul class="info-col-list">
+                        <li><strong>Mathematical & Economic Analysis:</strong> we conduct a detailed audit of the project's financial model. We assess marketing sustainability, fund distribution balance, liquidity pool viability, and identify hidden deficits at an early stage.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="info-grid-3" style="margin-top: -40px;">
+                <div class="info-col-3">
+                    <ul class="info-col-list" style="margin: 0;">
+                        <li><strong>Withdrawal Rules & Tokenomics Audit:</strong> we thoroughly verify payment rules and mechanics. We identify hidden fees, limits, restrictions, mandatory qualification conditions, and any artificial barriers preventing the free withdrawal of funds.</li>
+                    </ul>
+                </div>
+                <div class="info-col-3">
+                    <ul class="info-col-list" style="margin: 0;">
+                        <li><strong>Marketing Activity Verification:</strong> we perform deep monitoring of social networks and channels using AI. We filter out inflated audiences (bots), evaluate the real level of engagement, and detect signs of artificially generated hype.</li>
+                        <li><strong>Technical Audit of Code & Tokenomics:</strong> if a project uses a smart contract or its own token, we perform complex vulnerability scanning. We check the code for hidden backdoors, emergency balance freezing options, and hidden sell fees.</li>
+                    </ul>
+                </div>
+                <div class="info-col-3">
+                    <ul class="info-col-list" style="margin: 0;">
+                        <li><strong>Clear Verdict:</strong> based on the collected data, we form a structured, jargon-free report. We provide an objective risk assessment and clear, actionable recommendations to help you make an informed investment decision.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <h2 class="section-title">Pricing Plans</h2>
+            <section class="pricing-grid">
+                <!-- Product 1 -->
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="card-title">Audit of Network & Affiliate Projects</h3>
+                        <div class="meta-info"><strong>Target Audience:</strong> Investors who discovered a network or crowdfunding platform.</div>
+                        <div class="card-desc">Deep stability analysis of the financial model, marketing risks, and real liquidity inflows.</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check"></i> Mathematical deficit detection</li>
+                            <li><i class="fa-solid fa-check"></i> Payout barrier assessment</li>
+                            <li><i class="fa-solid fa-check"></i> AI social media bot analysis</li>
+                        </ul>
+                        <div class="formula-box">Safe entry formula: AI calculates optimal deposit sizes and profit evacuation timelines.</div>
+                    </div>
+                    <div>
+                        <div class="card-price">10 $</div>
+                        <a href="https://t.me" class="btn-action">Order Audit</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="card-title">Technical Smart Contract Audit</h3>
+                        <div class="meta-info"><strong>Target Audience:</strong> Investors in Web3, DeFi projects, and new tokens.</div>
+                        <div class="card-desc">Automated and expert scanning of blockchain source code to find dangerous vulnerabilities.</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check"></i> Freeze functions verification</li>
+                            <li><i class="fa-solid fa-check"></i> Hidden backdoor detection</li>
+                            <li><i class="fa-solid fa-check"></i> Sell fee and honeypot analysis</li>
+                        </ul>
+                        <div class="formula-box">Complete smart contract deconstruction: revealing hidden critical exploits before deploying capital.</div>
+                    </div>
+                    <div>
+                        <div class="card-price">20 $</div>
+                        <a href="https://t.me" class="btn-action">Order Audit</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="price-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3 class="card-title">Comprehensive Due Diligence of Investment Platforms</h3>
+                        <div class="meta-info"><strong>Target Audience:</strong> Large investors, team leaders, and investment pools.</div>
+                        <div class="card-desc">Maximum check: economics + code audit + legal and reputational background checks on founders.</div>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check"></i> All features from Plans 1 and 2</li>
+                            <li><i class="fa-solid fa-check"></i> Cash gap stress-testing</li>
+                            <li><i class="fa-solid fa-check"></i> Personal strategy session</li>
+                        </ul>
+                        <div class="formula-box">Comprehensive AI risk management map: an ultimate shield for your capital and reputation.</div>
+                    </div>
+                    <div>
+                        <div class="card-price">30 $</div>
+                        <a href="https://t.me" class="btn-action">Order Due Diligence</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+<section class="container">
+            <div class="disclaimer-section">
+                <h4>⚖️ DISCLAIMER</h4>
+                <p>The "Capital Shield AI" report constitutes a subjective analytical opinion based on open-source blockchain telemetry and automated data modeling. This information does not constitute financial, investment, or legal advice. Capital Shield AI assumes no liability for fund security or individual investment performance. Alternative assets carry a permanent risk of 100% principal loss. Verify data independently.</p>
+            </div>
+        </section>
+
+        <!-- CLEAN ENGLISH FRANCHISE BLOCK INSIDE BLOCK-EN -->
+        <section class="container" style="margin-top: 48px; margin-bottom: 32px;">
+            <div style="background: #0F111A; border-radius: 24px; padding: 32px; border: 1px solid #2A2F3F;">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <span style="background: #1A1F2C; color: #9CA3AF; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 30px;">🔥 FRANCHISE</span>
+                </div>
+                <h2 style="font-size: 26px; font-weight: 700; color: #E8EDF5; text-align: center; margin-bottom: 16px;">Become a Partner – Capital Shield AI Franchise</h2>
+                <p style="font-size: 16px; color: #9CA3AF; text-align: center; max-width: 700px; margin: 0 auto 32px auto;">Earn on IT audits of various projects. <strong style="color: #E8EDF5;">No investment required.</strong></p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 32px;">
+                    <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">💵</div>
+                        <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">$0 Initial Investment</div>
+                        <div style="font-size: 13px; color: #9CA3AF;">No hidden licenses. No starting capital needed.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">💰</div>
+                        <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Flexible Pricing</div>
+                        <div style="font-size: 13px; color: #9CA3AF;">Set your own price markup — keep 100% of the difference instantly.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
+                        <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Instant Revenue</div>
+                        <div style="font-size: 13px; color: #9CA3AF;">The client pays you → you order the audit from us → the rest is your pure profit.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <p style="font-size: 14px; color: #9CA3AF; margin-bottom: 16px;">Join CAPITAL SHIELD AI — the premier AI-powered special audit service for network projects and smart contracts.</p>
+                    <a href="https://t.me" style="display: inline-block; background: #1A1F2C; border: 1px solid #3A4050; color: #E8EDF5; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: 0.2s;" onmouseover="this.style.background='#2A2F3F'; this.style.borderColor='#9CA3AF';" onmouseout="this.style.background='#1A1F2C'; this.style.borderColor='#3A4050';">👉 Apply Now: text "Franchise"</a>
+                </div>
+            </div>
+        </section>
     </div>
-    <!-- БЛОК: СТАТЬ ПАРТНЁРОМ – ФРАНЧАЙЗИ -->
-    <div style="margin: 48px 0 32px; background: #0F111A; border-radius: 24px; padding: 32px; border: 1px solid #2A2F3F;">
-        <div style="text-align: center; margin-bottom: 24px;">
-            <span style="background: #1A1F2C; color: #9CA3AF; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 30px;">🔥 ФРАНЧАЙЗИ / FRANCHISE</span>
-        </div>
-        <h2 style="font-size: 26px; font-weight: 700; color: #E8EDF5; text-align: center; margin-bottom: 16px;">Стать партнёром – Франчайзи Capital Shield AI / Become a Partner</h2>
-        <p style="font-size: 16px; color: #9CA3AF; text-align: center; max-width: 700px; margin: 0 auto 32px auto;">Зарабатывайте на IT-аудите проектов. <strong style="color: #E8EDF5;">Без вложений. / Earn on IT audits. No investment required.</strong></p>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 32px;">
-            <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
-                <div style="font-size: 32px; margin-bottom: 12px;">💵</div>
-                <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">0 ₽ вложений / 0$ Initial Investment</div>
-                <div style="font-size: 13px; color: #9CA3AF;">Никаких лицензий. Никакого стартового капитала. / No licenses needed.</div>
-            </div>
-            <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
-                <div style="font-size: 32px; margin-bottom: 12px;">💰</div>
-                <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Свободная цена / Flexible Pricing</div>
-                <div style="font-size: 13px; color: #9CA3AF;">Ставите свою наценку — забираете 100% разницы сразу. / Set your markup, keep 100%.</div>
-            </div>
-            <div style="flex: 1; min-width: 200px; background: #0B0E17; border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #2A2F3F;">
-                <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
-                <div style="font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Моментальный доход / Instant Revenue</div>
-                <div style="font-size: 13px; color: #9CA3AF;">Клиент платит вам → вы заказываете аудит у нас. / Client pays you → you order from us.</div>
-            </div>
-        </div>
-
-        <div style="text-align: center;">
-            <p style="font-size: 14px; color: #9CA3AF; margin-bottom: 16px;">Присоединяйтесь к CAPITAL SHIELD AI — единственному в рунете ИИ-сервису специального аудита сетевых проектов и смарт-контрактов.</p>
-            <a href="https://t.me" style="display: inline-block; background: #1A1F2C; border: 1px solid #3A4050; color: #E8EDF5; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: 0.2s;" onmouseover="this.style.background='#2A2F3F'; this.style.borderColor='#9CA3AF';" onmouseout="this.style.background='#1A1F2C'; this.style.borderColor='#3A4050';">👉 Подать заявку: написать «Франшиза» / Apply: write "Franchise"</a>
-        </div>
-    </div>
-
-    <!-- Кнопка Telegram-связи -->
+ <!-- Кнопка Telegram-связи (Полностью автономная версия) -->
     <div class="container" style="text-align: center; margin: 40px auto; padding: 25px; background: rgba(0, 210, 255, 0.03); border: 1px dashed rgba(0, 210, 255, 0.2); border-radius: 14px; max-width: 1160px; position: relative; z-index: 9999;">
         <p style="font-size: 16px; color: #8E96A7; margin-bottom: 15px;">
             <i class="fa-brands fa-telegram" style="color: #00D2FF; margin-right: 8px; font-size: 18px;"></i>
