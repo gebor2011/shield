@@ -63,7 +63,7 @@
         .disclaimer-section p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
         footer { padding: 40px 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.02); margin-top: 40px; }
         footer p { font-size: 14px; color: var(--text-muted); }
-/* Адаптивные стили для 3 колонок */
+/* Стили для 3 колонок */
         .info-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 40px 0 60px 0; }
         .info-col-3 { background-color: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 30px 22px; text-align: left; transition: all 0.3s ease; display: flex; flex-direction: column; }
         .info-col-3:hover { border-color: var(--primary); box-shadow: 0 15px 35px var(--primary-glow); }
@@ -83,13 +83,13 @@
 </head>
 <body>
 
-    <!-- Языковой селектор -->
+    <!-- Переключатель языков -->
     <div style="text-align: right; padding: 15px 20px; max-width: 1200px; margin: 0 auto; font-size: 14px; position: relative; z-index: 9999;">
         <span id="lang-ru-btn" onclick="switchLang('ru')" style="color: #00D2FF; cursor: pointer; margin-right: 15px; font-weight: 700;">RU</span>
         <span id="lang-en-btn" onclick="switchLang('en')" style="color: #8E96A7; cursor: pointer; font-weight: 600;">EN</span>
     </div>
 
-    <!-- РУССКИЙ БЛОК -->
+    <!-- РУССКАЯ ВЕРСИЯ САЙТА -->
     <div id="block-ru">
         <header class="container">
             <div class="logo-box"><span>CS</span></div>
@@ -155,7 +155,7 @@
                     </div>
                     <div>
                         <div class="card-price">10 $</div>
-                        <a href="https://t.me" class="btn-action">Заказать аудит</a>
+                        <a href="https://t.me" target="_blank" class="btn-action">Заказать аудит</a>
                     </div>
                 </div>
 
@@ -175,7 +175,7 @@
                     </div>
                     <div>
                         <div class="card-price">20 $</div>
-                        <a href="https://t.me" class="btn-action">Заказать аудит</a>
+                        <a href="https://t.me" target="_blank" class="btn-action">Заказать аудит</a>
                     </div>
                 </div>
 
@@ -187,12 +187,15 @@
                         <div class="meta-info"><strong>Для кого:</strong> крупные инвесторы, лидеры команд и инвест-пулы.</div>
                         <div class="card-desc">Максимальная проверка: экономика + аудит кода + юридический/репутационный анализ бэкграунда создателей.</div>
                         <ul class="card-list">
-                                                                              </ul>
+                            <li><i class="fa-solid fa-check"></i> Все проверки Тарифов 1 и 2</li>
+                            <li><i class="fa-solid fa-check"></i> Стресс-тестирование кассового разрыва</li>
+                            <li><i class="fa-solid fa-check"></i> Персональная стратегическая сессия</li>
+                        </ul>
                         <div class="formula-box">Развернутая ИИ-карта управления рисками: ультимативный щит для вашего капитала и репутации.</div>
                     </div>
                     <div>
                         <div class="card-price">30 $</div>
-                        <a href="https://t.me" class="btn-action">Заказать Due Diligence</a>
+                        <a href="https://t.me" target="_blank" class="btn-action">Заказать Due Diligence</a>
                     </div>
                 </div>
             </section>
@@ -205,7 +208,7 @@
             </div>
         </section>
 
-        <!-- ЧИСТЫЙ РУССКИЙ БЛОК ФРАНШИЗЫ ВНУТРИ BLOCK-RU -->
+        <!-- ЧИСТЫЙ РУССКИЙ БЛОК ФРАНШИЗЫ -->
         <section class="container" style="margin-top: 48px; margin-bottom: 32px;">
             <div style="background: #0F111A; border-radius: 24px; padding: 32px; border: 1px solid #2A2F3F;">
                 <div style="text-align: center; margin-bottom: 24px;">
@@ -234,7 +237,7 @@
 
                 <div style="text-align: center;">
                     <p style="font-size: 14px; color: #9CA3AF; margin-bottom: 16px;">Присоединяйтесь к CAPITAL SHIELD AI — единственному в рунете ИИ-сервису специального аудита сетевых проектов и смарт-контрактов.</p>
-                    <a href="https://t.me" style="display: inline-block; background: #1A1F2C; border: 1px solid #3A4050; color: #E8EDF5; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: 0.2s;" onmouseover="this.style.background='#2A2F3F'; this.style.borderColor='#9CA3AF';" onmouseout="this.style.background='#1A1F2C'; this.style.borderColor='#3A4050';">👉 Подать заявку: написать «Франшиза»</a>
+                    <a href="https://t.me" target="_blank" style="display: inline-block; background: #1A1F2C; border: 1px solid #3A4050; color: #E8EDF5; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: 0.2s;" onmouseover="this.style.background='#2A2F3F'; this.style.borderColor='#9CA3AF';" onmouseout="this.style.background='#1A1F2C'; this.style.borderColor='#3A4050';">👉 Подать заявку: написать «Франшиза»</a>
                 </div>
             </div>
         </section>
@@ -307,7 +310,7 @@
                     </div>
                     <div>
                         <div class="card-price">10 $</div>
-                        <a href="https://t.me" class="btn-action">Order Audit</a>
+                        <a href="https://t.me" target="_blank" class="btn-action">Order Audit</a>
                     </div>
                 </div>
 
@@ -327,7 +330,7 @@
                     </div>
                     <div>
                         <div class="card-price">20 $</div>
-                        <a href="https://t.me" class="btn-action">Order Audit</a>
+                        <a href="https://t.me" target="_blank" class="btn-action">Order Audit</a>
                     </div>
                 </div>
 
@@ -347,12 +350,12 @@
                     </div>
                     <div>
                         <div class="card-price">30 $</div>
-                        <a href="https://t.me" class="btn-action">Order Due Diligence</a>
+                        <a href="https://t.me" target="_blank" class="btn-action">Order Due Diligence</a>
                     </div>
                 </div>
             </section>
         </main>
-      <section class="container">
+<section class="container">
             <div class="disclaimer-section">
                 <h4>⚖️ DISCLAIMER</h4>
                 <p>The "Capital Shield AI" report constitutes a subjective analytical opinion based on open-source blockchain telemetry and automated data modeling. This information does not constitute financial, investment, or legal advice. Capital Shield AI assumes no liability for fund security or individual investment performance. Alternative assets carry a permanent risk of 100% principal loss. Verify data independently.</p>
@@ -388,12 +391,12 @@
 
                 <div style="text-align: center;">
                     <p style="font-size: 14px; color: #9CA3AF; margin-bottom: 16px;">Join CAPITAL SHIELD AI — the premier AI-powered special audit service for network projects and smart contracts.</p>
-                    <a href="https://t.me" style="display: inline-block; background: #1A1F2C; border: 1px solid #3A4050; color: #E8EDF5; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: 0.2s;" onmouseover="this.style.background='#2A2F3F'; this.style.borderColor='#9CA3AF';" onmouseout="this.style.background='#1A1F2C'; this.style.borderColor='#3A4050';">👉 Apply Now: text "Franchise"</a>
+                    <a href="https://t.me" target="_blank" style="display: inline-block; background: #1A1F2C; border: 1px solid #3A4050; color: #E8EDF5; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: 0.2s;" onmouseover="this.style.background='#2A2F3F'; this.style.borderColor='#9CA3AF';" onmouseout="this.style.background='#1A1F2C'; this.style.borderColor='#3A4050';">👉 Apply Now: text "Franchise"</a>
                 </div>
             </div>
         </section>
     </div>
-    <!-- ОБЩИЙ БЛОК: СВЯЗАТЬСЯ С НАМИ В ТГ (ПОД ФРАНЧАЙЗИ) -->
+<!-- ОБЩИЙ БЛОК: СВЯЗАТЬСЯ С НАМИ В ТГ (ВИДЕН ВСЕГДА ПОД ФРАНШИЗОЙ) -->
     <div class="container" style="text-align: center; margin: 40px auto; padding: 25px; background: rgba(0, 210, 255, 0.03); border: 1px dashed rgba(0, 210, 255, 0.2); border-radius: 14px; max-width: 1160px; position: relative; z-index: 9999;">
         <p style="font-size: 16px; color: #8E96A7; margin-bottom: 15px;">
             <i class="fa-brands fa-telegram" style="color: #00D2FF; margin-right: 8px; font-size: 18px;"></i>
@@ -438,4 +441,3 @@
     <noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </body>
 </html>
-        
