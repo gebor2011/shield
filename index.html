@@ -152,45 +152,6 @@
             box-shadow: 0 0 20px rgba(245,197,66,0.2);
         }
 
-        .btn-gold-outline {
-            display: inline-block;
-            background: transparent;
-            color: #E8EDF5;
-            font-weight: 600;
-            font-size: 14px;
-            padding: 10px 20px;
-            border-radius: 40px;
-            text-decoration: none;
-            transition: 0.2s;
-            text-align: center;
-            width: 100%;
-            border: 1px solid #2A2F3F;
-            cursor: pointer;
-        }
-
-        .btn-gold-outline:hover {
-            border-color: #F5C542;
-            color: #F5C542;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #6B7280;
-            border-top: 1px solid #1A1F2C;
-            padding-top: 24px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #8E96A7;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #FFFFFF;
-        }
-
-        /* Блок преимуществ */
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -223,6 +184,23 @@
             line-height: 1.5;
         }
 
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #6B7280;
+            border-top: 1px solid #1A1F2C;
+            padding-top: 24px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #8E96A7;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #FFFFFF;
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 28px; }
             .subhead { font-size: 16px; }
@@ -241,47 +219,49 @@
             <span class="icon">💎</span> CAPITAL SHIELD AI <span class="accent">—</span> Компас Инвестора
         </div>
 
-        <!-- БЛОК 1. ГЕРОЙ -->
+        <!-- РЯД 0: ГЛАВНЫЙ ЭКРАН -->
         <div>
             <span class="badge">🔍 НОВАЯ УСЛУГА</span>
             <h1>Компас Инвестора</h1>
             <p class="subhead">
-                Полная проверка проектов по 14 модулям безопасности.<br>
-                Узнайте, стоит ли заходить, и получите прогноз до краха.
+                Автоматизированный аудит, технический анализ и оценка рисков инвестиционных проектов.<br>
+                Объективный анализ вместо маркетинговых заявлений.
             </p>
         </div>
 
-        <!-- БЛОК 2. О СЕРВИСЕ -->
-        <div style="margin-top: 48px;">
-            <h2 class="section-title">О сервисе</h2>
-            <p class="section-sub">
-                В мире крипты и сетевых проектов доверять на слово — самый быстрый способ обнулиться. Сервис Capital Shield AI создан для тех, кто хочет знать правду о проекте.
+        <!-- Описание -->
+        <div style="margin-top: 32px;">
+            <p style="font-size: 15px; color: #D1D9E6; line-height: 1.6; max-width: 850px;">
+                Принятие инвестиционных решений в сфере криптовалют, Web3-протоколов и партнерских программ сопряжено с высокой неопределенностью. Декларируемые разработчиками алгоритмы и дорожные карты часто содержат критические уязвимости, неучтенные кассовые разрывы или намеренно заложенные механизмы несанкционированного вывода ликвидности.
+            </p>
+            <p style="font-size: 15px; color: #D1D9E6; line-height: 1.6; margin-top: 16px; max-width: 850px;">
+                <strong style="color: #E8EDF5;">Capital Shield AI</strong> предоставляет инструменты независимой проверки. Мы деконструируем программный код, моделируем финансовую устойчивость систем и выявляем скрытые риски до этапа размещения вашего капитала.
             </p>
         </div>
 
-        <!-- БЛОК 3. КОМУ НЕОБХОДИМ -->
-        <div style="margin-top: 40px;">
-            <h2 class="section-title">Кому необходим</h2>
+        <!-- Целевая аудитория -->
+        <div style="margin-top: 32px;">
+            <h2 class="section-title" style="font-size: 22px; margin-bottom: 16px;">Целевая аудитория сервиса</h2>
             <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon">💰</div>
-                    <h3>Инвесторам</h3>
-                    <p>Защитить свой капитал от скрытых багов и внезапных скамов.</p>
+                <div class="card" style="padding: 20px;">
+                    <div class="card-icon" style="font-size: 24px;">💼</div>
+                    <h3 style="font-size: 16px;">Профессиональные инвесторы</h3>
+                    <p style="font-size: 13px;">Оценка экономической обоснованности платформ, защита крупных аллокаций от каскадных ликвидаций и системных сбоев.</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">👥</div>
-                    <h3>Блогерам и лидерам</h3>
-                    <p>Твоя репутация стоит дороже любых реферальных. Не зови людей в проекты, которые завтра закроются.</p>
+                <div class="card" style="padding: 20px;">
+                    <div class="card-icon" style="font-size: 24px;">👥</div>
+                    <h3 style="font-size: 16px;">Лидеры команд и блогеры</h3>
+                    <p style="font-size: 13px;">Independênтеая экспертиза проектов перед их интеграцией для минимизации репутационных и юридических рисков.</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🧠</div>
-                    <h3>Новичкам в крипте</h3>
-                    <p>Не умеешь читать код смарт-контракта? Capital Shield AI сделает это за тебя.</p>
+                <div class="card" style="padding: 20px;">
+                    <div class="card-icon" style="font-size: 24px;">🧠</div>
+                    <h3 style="font-size: 16px;">Начинающие Web3-участники</h3>
+                    <p style="font-size: 13px;">Техническая поддержка при отсутствии навыков самостоятельного чтения смарт-контрактов и глубокого анализа токеномики.</p>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 4. ПРОДУКТЫ (ПЕРВЫЙ РЯД) -->
+        <!-- РЯД 1: ПРОДУКТЫ СЕРВИСА -->
         <div style="margin-top: 56px;">
             <h2 class="section-title">Продукты сервиса</h2>
             <div class="grid-3">
@@ -289,8 +269,9 @@
                 <div class="card">
                     <div class="card-icon">🧭</div>
                     <h3>Экспресс-анализ сайта</h3>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 4px;"><strong style="color: #E8EDF5;">Для кого:</strong> инвестор, который нашёл сетевой или краудфандинговый проект и хочет в него зайти.</p>
-                    <p style="font-size: 13px; color: #9CA3AF;">Глубокий анализ устойчивости финансовой модели, маркетинговых рисков и реального притока ликвидности.</p>
+                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Для кого:</strong> Инвесторы, проводящие первичный скрининг новых краудфандинговых или сетевых платформ.</p>
+                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Предмет проверки:</strong> Базовый аудит устойчивости финансовой модели, выявление скрытых маркетинговых ловушек и верификация фактического притока ликвидности.</p>
+                    <p style="font-size: 13px; color: #9CA3AF;"><strong style="color: #E8EDF5;">Итоговый результат:</strong> Заключение о целесообразности входа в проект и рекомендации по минимизации стартовых рисков.</p>
                     <div class="price">$10</div>
                     <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
                 </div>
@@ -299,8 +280,9 @@
                 <div class="card">
                     <div class="card-icon">🔬</div>
                     <h3>Технический аудит смарт-контрактов</h3>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 4px;"><strong style="color: #E8EDF5;">Для кого:</strong> инвесторы в Web3, DeFi проекты и новые токены.</p>
-                    <p style="font-size: 13px; color: #9CA3AF;">Автоматизированное и экспертное сканирование исходного кода блокчейн-контрактов на уязвимости.</p>
+                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Для кого:</strong> Инвесторы в DeFi-протоколы, пулы ликвидности и новые цифровые активы.</p>
+                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Предмет проверки:</strong> Автоматизированное и экспертное сканирование исходного кода блокчейн-контрактов. Полный разбор программной логики, симуляция транзакций и поиск критических уязвимостей.</p>
+                    <p style="font-size: 13px; color: #9CA3AF;"><strong style="color: #E8EDF5;">Итоговый результат:</strong> Выявление скрытых функций (таких как Honeypot, Mint, Blacklist) и бэкдоров разработчиков до момента деплоя капитала.</p>
                     <div class="price">$10</div>
                     <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
                 </div>
@@ -309,67 +291,50 @@
                 <div class="card">
                     <div class="card-icon">🛡️</div>
                     <h3>Комплексный Due Diligence</h3>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 4px;"><strong style="color: #E8EDF5;">Для кого:</strong> инвесторы — участники этих проектов.</p>
-                    <p style="font-size: 13px; color: #9CA3AF;">14 модулей безопасности: OSINT, аудит чатов, математика рисков, юридические ловушки, денежный след и финальный диагноз.</p>
+                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Для кого:</strong> Крупные вкладчики и партнеры, заходящие на значительные чеки и требующие максимальной детализации.</p>
+                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Предмет проверки:</strong> Тотальный анализ по 14 модулям безопасности: OSINT, аудит коммуникационных каналов, математическое моделирование рисков, юридическая экспертиза оферт и трекинг кошельков основателей.</p>
+                    <p style="font-size: 13px; color: #9CA3AF;"><strong style="color: #E8EDF5;">Итоговый результат:</strong> Развернутая ИИ-карта управления рисками и прогноз жизнеспособности платформы для принятия взвешенного решения.</p>
                     <div class="price">$30</div>
                     <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 5. ЧЕМ ПОЛЕЗНЫ НАШИ ПРОДУКТЫ (ВТОРОЙ РЯД) -->
+        <!-- РЯД 3: ЧЕМ ПОЛЕЗНЫ НАШИ ПРОДУКТЫ -->
         <div style="margin-top: 40px;">
             <h2 class="section-title">Чем полезны наши продукты</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="emoji">🧭</div>
+                    <div class="emoji">⏱️</div>
                     <h4>Экспресс-анализ</h4>
-                    <p>Даёт понимание: стоит ли заходить в проект и как это сделать с минимальными рисками.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="emoji">🔬</div>
-                    <h4>Технический аудит</h4>
-                    <p>Выявляет скрытые уязвимости смарт-контракта до деплоя капитала. Mint, Honeypot, Ownership, Liquidity Lock.</p>
+                    <p><strong style="color:#E8EDF5;">Оптимизация времени:</strong> Быстрая фильтрация нежизнеспособных моделей на этапе первичного отбора.</p>
+                    <p style="margin-top: 8px;"><strong style="color:#E8EDF5;">Верификация данных:</strong> Доступ к реальным показателям трафика и выявление признаков скорого кассового разрыва.</p>
+                    <p style="margin-top: 8px;"><strong style="color:#E8EDF5;">Определение точки выхода:</strong> Математический расчет оптимального временного окна для фиксации прибыли.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="emoji">🛡️</div>
+                    <h4>Аудит смарт-контракта</h4>
+                    <p><strong style="color:#E8EDF5;">Предотвращение потери средств:</strong> Защита от принудительной блокировки токенов или внезапного вывода пула ликвидности.</p>
+                    <p style="margin-top: 8px;"><strong style="color:#E8EDF5;">Исключение человеческого фактора:</strong> Нейросетевой анализ выявляет скрытые микро-баги логики.</p>
+                    <p style="margin-top: 8px;"><strong style="color:#E8EDF5;">Техническое обоснование:</strong> Переход от гипотез к точным техническим фактам.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="emoji">📊</div>
                     <h4>Комплексный Due Diligence</h4>
-                    <p>Полная разборка по 14 модулям. Ультимативный щит для вашего капитала и репутации.</p>
+                    <p><strong style="color:#E8EDF5;">Структурированный отчет:</strong> Объективная оценка рисков и итоговая рекомендация без избыточной терминологии.</p>
+                    <p style="margin-top: 8px;"><strong style="color:#E8EDF5;">Карта скрытых условий:</strong> Своевременное обнаружение юридических уловок и ограничений на вывод средств.</p>
+                    <p style="margin-top: 8px;"><strong style="color:#E8EDF5;">Финансовая прозрачность:</strong> Раскрытие структуры распределения входящих потоков и реального целевого использования средств.</p>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 6. ЧТО ВЫ ПОЛУЧИТЕ -->
-        <div style="margin-top: 48px;">
-            <h2 class="section-title">Что вы получите</h2>
-            <div class="card" style="background: #12161F; border-radius: 20px; padding: 28px 24px; border: 1px solid #2A2F3F;">
-                <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-                    <div style="flex: 1; min-width: 200px;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
-                        <h4 style="font-size: 16px; font-weight: 700;">Математический и экономический анализ</h4>
-                        <p style="font-size: 13px; color: #9CA3AF; line-height: 1.5;">Аудит финансовой модели, устойчивость маркетинга, баланс распределения средств и жизнеспособность пулов ликвидности.</p>
-                    </div>
-                    <div style="flex: 1; min-width: 200px;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">🚪</div>
-                        <h4 style="font-size: 16px; font-weight: 700;">Анализ условий вывода</h4>
-                        <p style="font-size: 13px; color: #9CA3AF; line-height: 1.5;">Выявляем скрытые комиссии, лимиты и барьеры, препятствующие свободному выводу средств.</p>
-                    </div>
-                    <div style="flex: 1; min-width: 200px;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
-                        <h4 style="font-size: 16px; font-weight: 700;">Понятный вердикт</h4>
-                        <p style="font-size: 13px; color: #9CA3AF; line-height: 1.5;">Структурированный отчёт без воды. Объективная оценка рисков и чёткая рекомендация.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- БЛОК 7. ПРИЗЫВ И КОНТАКТЫ -->
+        <!-- ПОДВАЛ -->
         <div style="margin-top: 48px; text-align: center; background: #12161F; border-radius: 28px; padding: 32px; border: 1px solid #2A2F3F;">
             <p style="font-size: 16px; color: #9CA3AF; margin-bottom: 12px;">Возникли вопросы по аудиту или партнерству?</p>
-            <a href="https://t.me/capitalshield_ai" target="_blank" style="color: #F5C542; font-weight: 700; font-size: 18px; text-decoration: none; border-bottom: 1px dashed #F5C542;">За дополнительной информацией обращайтесь в личку Telegram</a>
+            <p style="font-size: 14px; color: #6B7280; margin-bottom: 16px;">За дополнительной информацией обращайтесь в личку Telegram. Наша команда предоставляет технические консультации и решения для нестандартных аналитических задач.</p>
+            <a href="https://t.me/capitalshield_ai" target="_blank" style="color: #F5C542; font-weight: 700; font-size: 18px; text-decoration: none; border-bottom: 1px dashed #F5C542;">Связаться в Telegram</a>
         </div>
 
-        <!-- ФУТЕР -->
         <div class="footer">
             <span>© 2026 Capital Shield AI</span>
             <span style="margin: 0 12px;">·</span>
