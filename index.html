@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Capital Shield AI — лендинг</title>
+  <title>Capital Shield AI</title>
   <style>
     * {
       margin: 0;
@@ -19,7 +19,7 @@
       justify-content: center;
       padding: 30px 20px;
     }
-    .card {
+    .container {
       max-width: 1100px;
       width: 100%;
       background: rgba(255, 255, 255, 0.04);
@@ -29,26 +29,9 @@
       border-radius: 48px;
       padding: 48px 40px 40px;
       box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-      transition: transform 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .logo {
-      display: inline-block;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: #7c8cff;
-      background: rgba(124, 140, 255, 0.12);
-      padding: 6px 18px;
-      border-radius: 40px;
-      margin-bottom: 28px;
-      border: 1px solid rgba(124, 140, 255, 0.2);
-    }
-    /* Основной текст — каждое предложение с новой строки */
-    .content p {
+    /* Вступительный текст — каждое предложение отдельным абзацем */
+    .intro p {
       font-size: 20px;
       line-height: 1.6;
       color: #eef1ff;
@@ -57,13 +40,14 @@
       font-weight: 400;
       letter-spacing: 0.2px;
     }
-    .content p:last-of-type {
+    .intro p:last-child {
       margin-bottom: 0;
     }
-    .content p strong {
+    .intro p strong {
       color: #a8b8ff;
       font-weight: 600;
     }
+
     /* Раздел «Наши услуги» */
     .services {
       margin-top: 50px;
@@ -97,29 +81,24 @@
       transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       cursor: default;
     }
-    /* «Оживление» при наведении */
+    /* Оживление при наведении */
     .service-item:hover {
       transform: translateY(-8px) scale(1.02);
       border-color: #7c8cff;
       box-shadow: 0 12px 35px -8px rgba(124, 140, 255, 0.35), inset 0 0 0 1px rgba(124, 140, 255, 0.15);
       background: rgba(124, 140, 255, 0.06);
     }
-    .service-icon {
-      font-size: 40px;
-      margin-bottom: 14px;
-      display: block;
-    }
     .service-item h3 {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 600;
       color: #d6deff;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       letter-spacing: 0.3px;
     }
     .service-item p {
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.5;
-      color: rgba(255, 255, 255, 0.65);
+      color: rgba(255, 255, 255, 0.7);
       margin: 0;
     }
     .footer-note {
@@ -132,11 +111,11 @@
       letter-spacing: 0.3px;
     }
     @media (max-width: 768px) {
-      .card {
+      .container {
         padding: 32px 20px;
         border-radius: 32px;
       }
-      .content p {
+      .intro p {
         font-size: 17px;
         line-height: 1.5;
         margin-bottom: 14px;
@@ -160,12 +139,10 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <!-- Логотип -->
-    <div class="logo">⚡ Capital Shield AI</div>
+  <div class="container">
 
-    <!-- Основной текст — каждое предложение отдельным абзацем -->
-    <div class="content">
+    <!-- ВСТУПИТЕЛЬНЫЙ ТЕКСТ — КАЖДОЕ ПРЕДЛОЖЕНИЕ С НОВОЙ СТРОКИ -->
+    <div class="intro">
       <p>В мире, где инвестиционные и сетевые проекты меняются молниеносно, а информация устаревает за часы, полагаться на разовую проверку — значит играть в рулетку.</p>
       <p><strong>Capital Shield AI</strong> — это не просто аудит.</p>
       <p>Это твоя персональная система раннего предупреждения, которая непрерывно отслеживает инвестиционные риски в любом проекте.</p>
@@ -173,25 +150,19 @@
       <p>Забудь о страхе внезапных потерь – теперь ты будешь точно знать, что происходит с твоими активами и когда пора действовать.</p>
     </div>
 
-    <!-- РАЗДЕЛ «НАШИ УСЛУГИ» – 3 колонки в рамках, с анимацией при наведении -->
+    <!-- РАЗДЕЛ «НАШИ УСЛУГИ» – 3 КОЛОНКИ В РАМКЕ С ОЖИВЛЕНИЕМ -->
     <div class="services">
       <div class="services-title"><span>Наши услуги</span></div>
       <div class="services-grid">
-        <!-- Услуга 1 -->
         <div class="service-item">
-          <span class="service-icon">🛡️</span>
           <h3>Непрерывный мониторинг</h3>
           <p>Круглосуточное сканирование проектов и активов в реальном времени.</p>
         </div>
-        <!-- Услуга 2 -->
         <div class="service-item">
-          <span class="service-icon">📊</span>
           <h3>Математический анализ</h3>
           <p>Оценка рисков на основе алгоритмов и статистических моделей.</p>
         </div>
-        <!-- Услуга 3 -->
         <div class="service-item">
-          <span class="service-icon">⚡</span>
           <h3>Сигналы раннего предупреждения</h3>
           <p>Оповещения о критических изменениях до того, как они повлияют на тебя.</p>
         </div>
