@@ -6,11 +6,7 @@
     <title>Компас Инвестора — Capital Shield AI</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background: #0B0E17;
@@ -20,28 +16,19 @@
             padding: 0 16px;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 0 60px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 0 60px; }
 
         .logo {
             font-size: 20px;
             font-weight: 700;
-            letter-spacing: 0.5px;
             color: #FFFFFF;
             margin-bottom: 40px;
             border-bottom: 1px solid #1A1F2C;
             padding-bottom: 20px;
         }
-        .logo .icon {
-            color: #F5C542;
-        }
-        .logo .accent {
-            color: #9CA3AF;
-            font-weight: 400;
-        }
+
+        .logo .icon { color: #F5C542; }
+        .logo .accent { color: #9CA3AF; font-weight: 400; }
 
         .badge {
             display: inline-block;
@@ -50,7 +37,6 @@
             border-radius: 40px;
             padding: 6px 16px;
             font-size: 13px;
-            font-weight: 500;
             color: #9CA3AF;
             margin-bottom: 20px;
         }
@@ -60,21 +46,18 @@
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 16px;
-            letter-spacing: -0.02em;
         }
 
         .subhead {
             font-size: 18px;
             color: #9CA3AF;
-            max-width: 700px;
-            line-height: 1.6;
+            max-width: 800px;
         }
 
         .section-title {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             margin-bottom: 16px;
-            letter-spacing: -0.01em;
         }
 
         .grid-3 {
@@ -89,34 +72,17 @@
             border-radius: 20px;
             padding: 28px 24px;
             border: 1px solid #2A2F3F;
-            transition: 0.2s;
         }
 
         .card:hover {
             border-color: #F5C542;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(245,197,66,0.05);
         }
 
-        .card-icon {
+        .card h3 { font-size: 18px; margin-bottom: 8px; }
+        .card p { font-size: 14px; color: #9CA3AF; }
+
+        .price {
             font-size: 28px;
-            margin-bottom: 12px;
-        }
-
-        .card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            font-size: 14px;
-            color: #9CA3AF;
-            line-height: 1.5;
-        }
-
-        .card .price {
-            font-size: 32px;
             font-weight: 800;
             color: #F5C542;
             margin: 16px 0 8px;
@@ -127,28 +93,11 @@
             background: #F5C542;
             color: #0B0E17;
             font-weight: 700;
-            font-size: 15px;
             padding: 12px 24px;
             border-radius: 40px;
             text-decoration: none;
-            transition: 0.2s;
-            text-align: center;
             width: 100%;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-gold:hover {
-            background: #E0B030;
-            transform: scale(1.02);
-            box-shadow: 0 0 20px rgba(245,197,66,0.2);
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin: 32px 0;
+            text-align: center;
         }
 
         .footer {
@@ -160,225 +109,124 @@
             text-align: center;
         }
 
-        .footer a {
-            color: #8E96A7;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #FFFFFF;
-        }
-
         @media (max-width: 768px) {
             h1 { font-size: 28px; }
-            .subhead { font-size: 16px; }
-            .section-title { font-size: 24px; }
             .grid-3 { grid-template-columns: 1fr; }
-            .benefits-grid { grid-template-columns: 1fr; }
-            .logo { font-size: 16px; }
         }
     </style>
+
     <script src="https://getlaunchlist.com/js/widget.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
+<div class="container">
 
-        <div class="logo">
-            <span class="icon">💎</span> CAPITAL SHIELD AI <span class="accent">—</span> Компас Инвестора
-        </div>
-
-        <!-- ГЛАВНЫЙ ЭКРАН -->
-        <div>
-            <span class="badge">🔍 НОВАЯ УСЛУГА</span>
-            <h1>Компас Инвестора</h1>
-            <p class="subhead">
-                Вы видите красивые презентации, обещания высокой доходности и активные чаты участников. Но за внешней картиной не всегда видны реальные риски.
-
-Компас Инвестора помогает оценить инвестиционный проект до входа и во время участия в нём.
-
-Мы анализируем финансовую модель, устойчивость проекта, признаки риска и ключевые показатели, чтобы вы могли принимать решения на основе фактов, а не эмоций.
-            </p>
-        </div>
-
-        <!-- Описание -->
-        <div style="margin-top: 32px;">
-            <p style="font-size: 15px; color: #D1D9E6; line-height: 1.6; max-width: 850px;">
-               Capital Shield AI — сервис независимого анализа инвестиционных проектов.
-
-Мы помогаем инвесторам выявлять скрытые риски, оценивать устойчивость платформ и понимать возможные сценарии их дальнейшего развития.
-
-В результате вы получаете объективную оценку проекта, карту рисков и ориентиры для принятия инвестиционных решений.
-            </p>
-            <p style="font-size: 15px; color: #D1D9E6; line-height: 1.6; margin-top: 16px; max-width: 850px;">
-                <strong style="color: #E8EDF5;">Capital Shield AI</strong> предоставляет инструменты независимого анализа инвестиционных проектов.
-
-Наш алгоритм формирует «Таймлайн безопасности» — модель оценки рисков, которая помогает определить периоды повышенной устойчивости проекта и своевременно выявлять признаки возможного ухудшения ситуации.
-
-Это позволяет инвестору принимать решения на основе объективных данных, а не маркетинговых обещаний.
-            </p>
-        </div>
-
-        <!-- ЦЕЛЕВАЯ АУДИТОРИЯ -->
-        <div style="margin-top: 32px;">
-            <h2 class="section-title" style="font-size: 22px; margin-bottom: 16px;">Целевая аудитория сервиса</h2>
-            <div class="grid-3">
-                <div class="card" style="padding: 20px;">
-                    <div class="card-icon" style="font-size: 24px;">💼</div>
-                    <h3 style="font-size: 16px;">Вы уже участвуете в проекте?</h3>
-                    <p style="font-size: 13px;">Доход начисляется, но ситуация может меняться. Мы поможем оценить текущие риски и вовремя заметить тревожные сигналы.</p>
-                </div>
-                <div class="card" style="padding: 20px;">
-                    <div class="card-icon" style="font-size: 24px;">👥</div>
-                    <h3 style="font-size: 16px;">Вы рискуете репутацией</h3>
-                    <p style="font-size: 13px;">Если вы лидер команды, блогер или активно рекомендуете проекты другим людям, цена ошибки значительно выше. Мы поможем оценить риски до того, как они повлияют на вашу репутацию.</p>
-                </div>
-                <div class="card" style="padding: 20px;">
-                    <div class="card-icon" style="font-size: 24px;">🧠</div>
-                    <h3 style="font-size: 16px;">Инвестируете в криптопроекты и DeFi?</h3>
-                    <p style="font-size: 13px;">Мы проведём технический анализ смарт-контракта, проверим основные риски и подготовим понятное заключение без сложной терминологии.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ПРОДУКТЫ -->
-        <div style="margin-top: 56px;">
-            <h2 class="section-title">Продукты сервиса. 
-              
-Акция первого заказа – Все 3 продукта - 90$.</h2>
-            <div class="grid-3">
-                <!-- Продукт 1 -->
-                <div class="card">
-                    <div class="card-icon">🧭</div>
-                    <h3>Экспресс-анализ проекта</h3>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Для кого:</strong> Вы нашли новый проект и хотите быстро понять — стоит ли тратить на него время и деньги.</p>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Что проверяем:</strong> Устойчивость финансовой модели, маркетинговые ловушки и реальный приток денег.</p>
-                    <p style="font-size: 13px; color: #9CA3AF;"><strong style="color: #E8EDF5;">Результат:</strong> Заключение — независимая оценка проекта, основные риски, сильные стороны и факторы, на которые следует обратить внимание инвестору.</p>
-                    <div class="price">$19</div>
-                    <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
-                </div>
-
-                <!-- Продукт 2 -->
-                <div class="card">
-                    <div class="card-icon">🔬</div>
-                    <h3>Технический аудит смарт-контрактов</h3>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Для кого:</strong> Вы собираетесь вкладывать в DeFi-протоколы, пулы ликвидности или новые токены.</p>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Что проверяем:</strong> Код контракта на скрытые функции: сможете ли вы продать свой токен, есть ли лазейки для блокировки ваших средств.</p>
-                    <p style="font-size: 13px; color: #9CA3AF;"><strong style="color: #E8EDF5;">Результат:</strong> Вы получите список выявленных рисков, ограничений и потенциально опасных функций смарт-контракта.</p>
-                    <div class="price">$29</div>
-                    <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
-                </div>
-
-                <!-- Продукт 3 -->
-                <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Прогнозный анализ + Комплексный Due Diligence</h3>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Для кого:</strong> У вас крупный депозит или структура, и вы хотите знать всё — до последнего риска.</p>
-                    <p style="font-size: 13px; color: #9CA3AF; margin-bottom: 12px;"><strong style="color: #E8EDF5;">Что проверяем:</strong> 14 модулей: OSINT, юристы, деньги, команда, эндшпиль.</p>
-                    <p style="font-size: 13px; color: #9CA3AF;"><strong style="color: #E8EDF5;">Результат:</strong> Полная карта рисков, оценка устойчивости проекта, вероятные сценарии развития и признаки, требующие повышенного внимания инвестора.</p>
-                    <div class="price">$69</div>
-                    <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ЧЕМ ПОЛЕЗНЫ НАШИ ПРОДУКТЫ -->
-        <div style="margin-top: 56px;">
-            <h2 class="section-title">Чем полезны наши продукты</h2>
-            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px;">
-
-                <div class="card" style="background: #12161F; border-radius: 20px; padding: 24px 20px; border: 1px solid #2A2F3F; text-align: left;">
-                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Экспресс-анализ</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px; font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Быстрая оценка проекта</strong> Получите независимое мнение о проекте до вложения средств или на раннем этапе участия.
-                        </li>
-                        <li style="margin-bottom: 12px; font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Выявление основных рисков.</strong> Анализ финансовой модели, маркетинга, структуры выплат и факторов устойчивости.
-                        </li>
-                        <li style="font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Основа для принятия решения.</strong> Поймёте, какие преимущества и риски имеет проект, и на что следует обратить особое внимание инвестору.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card" style="background: #12161F; border-radius: 20px; padding: 24px 20px; border: 1px solid #2A2F3F; text-align: left;">
-                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Аудит смарт-контракта</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px; font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Анализ функций контракта</strong> Проверка ключевых механизмов управления, ограничений и потенциально опасных возможностей.
-                        </li>
-                        <li style="margin-bottom: 12px; font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Выявление технических рисков</strong> Поиск признаков блокировки операций, ограничений на продажу токенов и других критически важных факторов.
-                        </li>
-                        <li style="font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Понятное заключение</strong> Получите отчёт без сложного технического языка с описанием выявленных рисков и их возможных последствий.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card" style="background: #12161F; border-radius: 20px; padding: 24px 20px; border: 1px solid #2A2F3F; text-align: left;">
-                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Комплексный Due Diligence</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px; font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Всестороннее исследование проекта</strong> Комплексная проверка команды, финансовой модели, юридических факторов, маркетинга и устойчивости проекта.
-                        </li>
-                        <li style="margin-bottom: 12px; font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Карта рисков и уязвимостей</strong> Выявление факторов, которые могут повлиять на дальнейшую работу платформы и безопасность инвестиций.
-                        </li>
-                        <li style="font-size: 14px; color: #D1D9E6; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #F5C542;">•</span>
-                            <strong style="color: #E8EDF5;">Сценарный анализ</strong> Оценка возможных вариантов развития проекта и признаков, требующих повышенного внимания инвестора.
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- ПАРТНЁРСКАЯ ПРОГРАММА -->
-        <div style="margin-top: 56px;">
-            <div style="background: #12161F; border-radius: 20px; padding: 32px 28px; border: 1px solid #2A2F3F;">
-                <h3 style="font-size: 22px; font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Предварительная запись на участие в Партнёрской программе «Компас Инвестора»</h3>
-                <p style="font-size: 15px; color: #9CA3AF; margin-bottom: 4px;">Помогайте инвесторам и сетевикам сохранять деньги. Зарабатывайте на этом 40% от цены наших продуктов.</p>
-                <p style="font-size: 15px; color: #9CA3AF; margin-bottom: 24px;">Оставьте заявку в листе ожидания — и получите самые выгодные условия партнёрства.</p>
-                <div class="launchlist-widget" data-key-id="zSOUVu" data-locale="ru"></div>
-            </div>
-        </div>
-
-        <!-- ПРИЗЫВ -->
-        <div style="margin-top: 48px; text-align: center; background: #12161F; border-radius: 28px; padding: 32px; border: 1px solid #2A2F3F;">
-            <p style="font-size: 16px; color: #9CA3AF; margin-bottom: 12px;">Не рискуйте вслепую. Проверьте свой проект прямо сейчас.</p>
-            <p style="font-size: 14px; color: #6B7280; margin-bottom: 16px;">Присоединяйтесь к группе «Компас Инвестора»: получите полную информацию об услугах, задайте вопросы и посмотрите примеры наших отчётов.</p>
-            <a href="https://t.me/capitalshieldaiI" target="_blank" style="color: #F5C542; font-weight: 700; font-size: 18px; text-decoration: none; border-bottom: 1px dashed #F5C542;">Компас Инвестора</a>
-        </div>
-
-        <div class="footer">
-            <span>© 2026 Capital Shield AI</span>
-            <span style="margin: 0 12px;">·</span>
-            <span>Компас Инвестора</span>
-            <span style="margin: 0 12px;">·</span>
-            <a href="https://t.me/capitalshieldaiI" target="_blank">Telegram</a>
-        </div>
-
+    <div class="logo">
+        <span class="icon">💎</span> CAPITAL SHIELD AI <span class="accent">—</span> Компас Инвестора
     </div>
 
-    <!-- Яндекс.Метрика -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < e.length; j++) {if (e[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t),k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://yandex.ru", "ym");
-        ym(97011244, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
-    </script>
-    <noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- HERO -->
+    <div>
+        <span class="badge">Анализ инвестиционных рисков</span>
+
+        <h1>Понимайте, что происходит с проектом на самом деле</h1>
+
+        <p class="subhead">
+            Инвестиционный проект выглядит стабильным в момент входа.  
+            Но ключевые изменения происходят уже после этого момента.
+
+            Мы фиксируем текущее состояние проекта и помогаем увидеть, как он меняется дальше.
+        </p>
+    </div>
+
+    <!-- ПОЧЕМУ -->
+    <div style="margin-top:40px;">
+        <h2 class="section-title">Почему Компас Инвестора</h2>
+        <p style="color:#9CA3AF; max-width:850px;">
+            Разовая проверка показывает только момент состояния проекта.  
+            Но риски появляются позже — когда проект начинает меняться.
+
+            Мы создаём точку отсчёта и при необходимости отслеживаем дальнейшие изменения, которые влияют на риски и результат.
+        </p>
+    </div>
+
+    <!-- ПРОДУКТЫ -->
+    <div style="margin-top:56px;">
+        <h2 class="section-title">Наши услуги</h2>
+
+        <div class="grid-3">
+
+            <!-- 1 -->
+            <div class="card">
+                <h3>Анализ проекта</h3>
+                <p>Разовая проверка текущего состояния и рисков проекта.</p>
+                <div class="price">$39</div>
+                <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="card">
+                <h3>Capital Shield Guardian</h3>
+                <p>2 месяца наблюдения + 5 отчётов об изменениях проекта.</p>
+                <div class="price">$79</div>
+                <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+            </div>
+
+            <!-- 3 -->
+            <div class="card">
+                <h3>Проверка смарт-контракта</h3>
+                <p>Технический анализ и выявление критических уязвимостей.</p>
+                <div class="price">$29</div>
+                <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- КАК РАБОТАЕТ -->
+    <div style="margin-top:56px;">
+        <h2 class="section-title">Как это работает</h2>
+        <p style="color:#9CA3AF; max-width:850px;">
+            Вы выбираете услугу → мы проводим анализ → фиксируем состояние проекта → оцениваем риски → при необходимости продолжаем наблюдение.
+        </p>
+    </div>
+
+    <!-- ФИНАЛ -->
+    <div style="margin-top:56px; text-align:center; padding:32px; background:#12161F; border-radius:20px;">
+        <p style="color:#9CA3AF;">Не принимайте решения вслепую.</p>
+        <p style="margin-top:8px;">
+            <a href="https://t.me/capitalshieldaiI" style="color:#F5C542; font-weight:700; text-decoration:none;">
+                Перейти в Telegram
+            </a>
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Capital Shield AI · Компас Инвестора · 
+        <a href="https://t.me/capitalshieldaiI" style="color:#9CA3AF;">Telegram</a>
+    </div>
+
+</div>
+
+<!-- Яндекс.Метрика -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){
+m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+})(window, document, "script", "https://yandex.ru", "ym");
+
+ym(97011244, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+});
+</script>
+
+<noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
 </body>
 </html>
