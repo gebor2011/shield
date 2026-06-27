@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Capital Shield AI — лендинг</title>
   <style>
     * {
@@ -17,17 +17,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 30px 20px;
     }
     .card {
-      max-width: 820px;
+      max-width: 1100px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 48px;
-      padding: 48px 40px;
+      padding: 48px 40px 40px;
       box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.06);
       transition: transform 0.3s ease;
     }
@@ -47,6 +47,7 @@
       margin-bottom: 28px;
       border: 1px solid rgba(124, 140, 255, 0.2);
     }
+    /* Основной текст — каждое предложение с новой строки */
     .content p {
       font-size: 20px;
       line-height: 1.6;
@@ -56,21 +57,73 @@
       font-weight: 400;
       letter-spacing: 0.2px;
     }
-    .content p:last-child {
+    .content p:last-of-type {
       margin-bottom: 0;
     }
     .content p strong {
       color: #a8b8ff;
       font-weight: 600;
     }
-    .highlight {
+    /* Раздел «Наши услуги» */
+    .services {
+      margin-top: 50px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .services-title {
+      font-size: 28px;
+      font-weight: 600;
+      color: #eef1ff;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .services-title span {
       background: linear-gradient(90deg, #7c8cff, #b47cff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 28px 20px 24px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: default;
+    }
+    /* «Оживление» при наведении */
+    .service-item:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #7c8cff;
+      box-shadow: 0 12px 35px -8px rgba(124, 140, 255, 0.35), inset 0 0 0 1px rgba(124, 140, 255, 0.15);
+      background: rgba(124, 140, 255, 0.06);
+    }
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .service-item h3 {
+      font-size: 18px;
       font-weight: 600;
+      color: #d6deff;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+    .service-item p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.65);
+      margin: 0;
     }
     .footer-note {
-      margin-top: 32px;
+      margin-top: 38px;
       padding-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
       font-size: 14px;
@@ -78,7 +131,7 @@
       text-align: center;
       letter-spacing: 0.3px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .card {
         padding: 32px 20px;
         border-radius: 32px;
@@ -88,20 +141,63 @@
         line-height: 1.5;
         margin-bottom: 14px;
       }
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .service-item:hover {
+        transform: translateY(-4px) scale(1.01);
+      }
+      .services-title {
+        font-size: 24px;
+      }
+    }
+    @media (max-width: 480px) {
+      .service-item {
+        padding: 20px 16px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="card">
+    <!-- Логотип -->
     <div class="logo">⚡ Capital Shield AI</div>
+
+    <!-- Основной текст — каждое предложение отдельным абзацем -->
     <div class="content">
-      <!-- КАЖДОЕ ПРЕДЛОЖЕНИЕ — НА НОВОЙ СТРОКЕ (ОТДЕЛЬНЫЙ АБЗАЦ) -->
       <p>В мире, где инвестиционные и сетевые проекты меняются молниеносно, а информация устаревает за часы, полагаться на разовую проверку — значит играть в рулетку.</p>
       <p><strong>Capital Shield AI</strong> — это не просто аудит.</p>
       <p>Это твоя персональная система раннего предупреждения, которая непрерывно отслеживает инвестиционные риски в любом проекте.</p>
       <p>Мы даём тебе не догадки, а математически обоснованные данные и конкретные сигналы, чтобы ты всегда был на шаг впереди.</p>
       <p>Забудь о страхе внезапных потерь – теперь ты будешь точно знать, что происходит с твоими активами и когда пора действовать.</p>
     </div>
+
+    <!-- РАЗДЕЛ «НАШИ УСЛУГИ» – 3 колонки в рамках, с анимацией при наведении -->
+    <div class="services">
+      <div class="services-title"><span>Наши услуги</span></div>
+      <div class="services-grid">
+        <!-- Услуга 1 -->
+        <div class="service-item">
+          <span class="service-icon">🛡️</span>
+          <h3>Непрерывный мониторинг</h3>
+          <p>Круглосуточное сканирование проектов и активов в реальном времени.</p>
+        </div>
+        <!-- Услуга 2 -->
+        <div class="service-item">
+          <span class="service-icon">📊</span>
+          <h3>Математический анализ</h3>
+          <p>Оценка рисков на основе алгоритмов и статистических моделей.</p>
+        </div>
+        <!-- Услуга 3 -->
+        <div class="service-item">
+          <span class="service-icon">⚡</span>
+          <h3>Сигналы раннего предупреждения</h3>
+          <p>Оповещения о критических изменениях до того, как они повлияют на тебя.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="footer-note">Мониторинг 24/7 • Данные в реальном времени</div>
   </div>
 </body>
