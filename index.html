@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Компас Инвестора — Capital Shield AI</title>
+    <title>Capital Shield Guardian — Система контроля инвестиционных рисков</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
 
@@ -31,6 +31,7 @@
 
         .logo .icon { color: #F5C542; }
         .logo .accent { color: #9CA3AF; font-weight: 400; }
+        .logo .sub { font-size: 14px; color: #9CA3AF; font-weight: 400; display: block; margin-top: 2px; }
 
         .badge {
             display: inline-block;
@@ -43,11 +44,24 @@
             margin-bottom: 20px;
         }
 
-        h1 { font-size: 40px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+        h1 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
 
-        .subhead { font-size: 18px; color: #9CA3AF; max-width: 850px; }
+        .subhead {
+            font-size: 18px;
+            color: #9CA3AF;
+            max-width: 850px;
+        }
 
-        .section-title { font-size: 26px; font-weight: 700; margin-bottom: 16px; }
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
 
         .grid-3 {
             display: grid;
@@ -62,6 +76,9 @@
             padding: 28px 24px;
             border: 1px solid #2A2F3F;
         }
+
+        .card h3 { font-size: 18px; margin-bottom: 10px; }
+        .card p { font-size: 14px; color: #9CA3AF; margin-bottom: 10px; }
 
         .price {
             font-size: 28px;
@@ -82,6 +99,35 @@
             text-align: center;
         }
 
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #2A2F3F;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            color: #F5C542;
+            font-weight: 600;
+        }
+
+        .comparison-table td:first-child {
+            color: #9CA3AF;
+        }
+
+        .comparison-table td:last-child {
+            color: #E8EDF5;
+        }
+
+        .check { color: #F5C542; }
+        .cross { color: #6B7280; }
+
         .footer {
             margin-top: 40px;
             font-size: 13px;
@@ -90,71 +136,95 @@
             padding-top: 24px;
             text-align: center;
         }
+
+        .footer a { color: #9CA3AF; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 28px; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .comparison-table { font-size: 13px; }
+            .comparison-table th, .comparison-table td { padding: 8px 12px; }
+        }
     </style>
+
+    <script src="https://getlaunchlist.com/js/widget.js" defer></script>
 </head>
 
 <body>
 
 <div class="container">
 
+    <!-- ШАПКА -->
     <div class="logo">
-        <span class="icon">💎</span> CAPITAL SHIELD AI <span class="accent">—</span> Компас Инвестора
+        <span class="icon">🛡</span> CAPITAL SHIELD GUARDIAN
+        <span class="sub">Система постоянного контроля инвестиционных рисков</span>
     </div>
 
     <!-- HERO -->
     <div>
         <span class="badge">Анализ инвестиционных рисков</span>
 
-        <h1>Понимайте, что происходит с проектом на самом деле</h1>
+        <h1>Capital Shield AI: Больше, чем проверка. Это твой Guardian в мире инвестиций.</h1>
 
-        <p class="subhead">
-            Проект может выглядеть стабильным в момент входа.  
-            Но ключевые изменения происходят уже после этого момента.
+        <p style="font-size: 22px; font-weight: 600; color: #E8EDF5; margin-bottom: 8px;">
+            Система постоянного контроля рисков для инвесторов и лидеров в любых сетевых и инвестиционных проектах.
+        </p>
 
-            Мы фиксируем состояние проекта и отслеживаем, как оно меняется во времени.
+        <p style="font-size: 18px; color: #F5C542; margin-bottom: 16px; font-weight: 500;">
+            «Твой капитал под защитой 24/7. Никаких сюрпризов, только точные решения.»
+        </p>
+
+        <p class="subhead" style="margin-top: 16px;">
+            В мире, где инвестиционные и сетевые проекты меняются молниеносно, а информация устаревает за часы, полагаться на разовую проверку — значит играть в рулетку. Capital Shield AI — это не просто аудит. Это твоя персональная система раннего предупреждения, которая непрерывно отслеживает инвестиционные риски в любом проекте. Мы даём тебе не догадки, а математически обоснованные данные и конкретные сигналы, чтобы ты всегда был на шаг впереди. Забудь о страхе внезапных потерь – теперь ты будешь точно знать, что происходит с твоими активами и когда пора действовать.
         </p>
     </div>
 
-    <!-- WHY -->
+    <!-- PROBLEM -->
     <div style="margin-top:40px;">
-        <h2 class="section-title">Почему Компас Инвестора</h2>
+        <h2 class="section-title">Разовый аудит даёт снимок момента. Но проект живёт и меняется каждый день.</h2>
         <p style="color:#9CA3AF; max-width:850px;">
-            Разовая проверка показывает только момент состояния проекта.  
-            Реальные риски появляются позже — когда проект начинает меняться.
-
-            Мы создаём точку отсчёта и при необходимости отслеживаем дальнейшие изменения, которые влияют на риски и результат.
+            Вы получили отчёт. Всё чисто. А через месяц проект начал «сыпаться»: задержки выплат, отток лидеров, странные движения кошельков. Вы узнаёте об этом постфактум, когда уже поздно.
+        </p>
+        <p style="color:#E8EDF5; margin-top:12px; font-weight:600;">
+            Без постоянного контроля вы всегда рискуете.
         </p>
     </div>
 
-    <!-- SERVICES -->
+    <!-- SERVICES (цены исправлены) -->
     <div style="margin-top:56px;">
         <h2 class="section-title">Наши услуги</h2>
 
         <div class="grid-3">
 
+            <!-- 1. Старт -->
             <div class="card">
-                <h3>Анализ проекта</h3>
-                <p><b style="color:#E8EDF5;">Это первый шаг.</b> Чтобы понять, с чем ты имеешь дело.</p>
-                <p><b style="color:#E8EDF5;">Что мы даём:</b> реальную картину проекта.</p>
-                <p><b style="color:#E8EDF5;">Результат:</b> решение — заходить или нет.</p>
+                <h3>🧭 Первичный Анализ Проекта</h3>
+                <p style="font-size: 12px; color: #F5C542; margin-bottom: 8px;">Capital Shield Start</p>
+                <p>Это твой первый шаг к безопасности, чтобы точно понять, с чем ты имеешь дело.</p>
+                <p><b style="color:#E8EDF5;">Что мы даём:</b> реальную картину проекта — сильные стороны, слабые места и скрытые риски.</p>
+                <p><b style="color:#E8EDF5;">Результат:</b> понятная база для решения — заходить, ждать или не связываться.</p>
                 <div class="price">$39</div>
                 <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
             </div>
 
+            <!-- 2. Guardian -->
             <div class="card">
-                <h3>Capital Shield Guardian</h3>
-                <p><b style="color:#E8EDF5;">Следующий уровень.</b> Когда ты уже в проекте.</p>
-                <p><b style="color:#E8EDF5;">Что мы делаем:</b> отслеживаем изменения проекта.</p>
-                <p><b style="color:#E8EDF5;">Результат:</b> сигналы увеличения риска + 5 отчётов.</p>
+                <h3>🛡️ Capital Shield GUARDIAN</h3>
+                <p style="font-size: 12px; color: #F5C542; margin-bottom: 8px;">Система постоянного контроля рисков</p>
+                <p>Это ключевой уровень защиты для тех, кто уже в проекте и хочет быть в полной безопасности.</p>
+                <p><b style="color:#E8EDF5;">Что мы делаем:</b> фиксируем точку отсчёта, отслеживаем изменения, даём сигналы роста риска.</p>
+                <p><b style="color:#E8EDF5;">Результат:</b> 5 отчётов за 2 месяца + экстренные оповещения.</p>
                 <div class="price">$79</div>
                 <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
             </div>
 
+            <!-- 3. Код -->
             <div class="card">
-                <h3>Проверка смарт-контракта</h3>
-                <p><b style="color:#E8EDF5;">DeFi и токены.</b></p>
-                <p><b style="color:#E8EDF5;">Что проверяем:</b> вывод средств, ограничения, скрытые функции.</p>
-                <p><b style="color:#E8EDF5;">Результат:</b> понимание безопасности контракта.</p>
+                <h3>🔬 Технический Аудит Смарт-Контракта</h3>
+                <p style="font-size: 12px; color: #F5C542; margin-bottom: 8px;">Capital Shield Code</p>
+                <p>Отдельная глубокая проверка для DeFi, протоколов, пулов ликвидности и новых токенов.</p>
+                <p><b style="color:#E8EDF5;">Что мы проверяем:</b> возможность вывода, скрытые ограничения, опасные функции управления.</p>
+                <p><b style="color:#E8EDF5;">Результат:</b> понимаешь, безопасен ли технический фундамент проекта.</p>
                 <div class="price">$29</div>
                 <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
             </div>
@@ -162,35 +232,83 @@
         </div>
     </div>
 
-    <!-- 🔥 CTA UPGRADED -->
-    <div style="margin-top:56px; text-align:center; padding:40px; background:#12161F; border-radius:20px; border:1px solid #2A2F3F;">
-
-        <p style="font-size:18px; color:#E8EDF5; font-weight:600; margin-bottom:12px;">
-            Большинство инвесторов теряют деньги не из-за плохих проектов, а из-за отсутствия информации вовремя.
-        </p>
-
-        <p style="font-size:14px; color:#9CA3AF; margin-bottom:18px; max-width:850px; margin-left:auto; margin-right:auto;">
-            В Telegram-группе «Компас Инвестора» мы показываем реальные разборы проектов,
-            примеры отчётов и объясняем, как мы выявляем риски до того, как они становятся потерями.
-        </p>
-
-        <p style="font-size:14px; color:#9CA3AF; margin-bottom:22px;">
-            Это не реклама. Это доступ к реальной аналитике перед заказом услуг.
-        </p>
-
-        <a href="https://t.me/capitalshieldaiI"
-           style="color:#F5C542; font-weight:700; font-size:18px; text-decoration:none; border-bottom:1px dashed #F5C542;">
-            Перейти в Telegram-группу
-        </a>
-
+    <!-- COMPARISON -->
+    <div style="margin-top:56px;">
+        <h2 class="section-title">Чем Guardian отличается от обычного аудита</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Обычный аудит</th>
+                    <th>Capital Shield Guardian</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Один отчёт</td><td><span class="check">✅</span> Система постоянного контроля</td></tr>
+                <tr><td>Статичная картина</td><td><span class="check">✅</span> Динамическая картина риска</td></tr>
+                <tr><td>Не учитывает изменения</td><td><span class="check">✅</span> Отслеживает изменения во времени</td></tr>
+                <tr><td>Нет регулярных обновлений</td><td><span class="check">✅</span> Регулярные отчёты и алерты</td></tr>
+                <tr><td>Вы узнаёте о проблемах постфактум</td><td><span class="check">✅</span> Вы получаете предупреждения до того, как станет поздно</td></tr>
+            </tbody>
+        </table>
     </div>
 
+    <!-- AUDIENCE -->
+    <div style="margin-top:56px;">
+        <h2 class="section-title">Кому нужен Guardian</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>💼 Вы уже зашли в проект</h3>
+                <p>Деньги работают. Но вы не знаете, когда выходить. Guardian даёт прогноз и постоянный контроль.</p>
+            </div>
+            <div class="card">
+                <h3>👥 Вы рискуете репутацией</h3>
+                <p>Если вы лидер или блогер, ошибка стоит доверия команды. Guardian помогает не потерять лицо.</p>
+            </div>
+            <div class="card">
+                <h3>🧘 Вы хотите спать спокойно</h3>
+                <p>Вместо того чтобы каждое утро проверять чаты и кошельки — доверьте мониторинг нам.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top:56px; text-align:center; padding:32px; background:#12161F; border-radius:20px; border:1px solid #2A2F3F;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 16px;">Получите систему принятия решений, а не просто отчёт.</h2>
+        <p style="color:#9CA3AF; margin-bottom: 24px;">Guardian работает в реальном времени и снижает вероятность ошибок на рынке.</p>
+        <a href="https://t.me/capitalshield_ai" style="display: inline-block; background: #F5C542; color: #0B0E17; font-weight: 700; padding: 14px 40px; border-radius: 40px; text-decoration: none; font-size: 18px;">👉 Заказать Guardian</a>
+    </div>
+
+    <!-- FOOTER -->
     <div class="footer">
-        © 2026 Capital Shield AI · Компас Инвестора ·
-        <a href="https://t.me/capitalshieldaiI" style="color:#9CA3AF;">Telegram</a>
+        <span>🛡 CAPITAL SHIELD GUARDIAN</span>
+        <span style="margin: 0 12px;">·</span>
+        <span>Система постоянного контроля рисков</span>
+        <span style="margin: 0 12px;">·</span>
+        <a href="https://t.me/capitalshieldaiI">Telegram</a>
+        <br>
+        <span style="font-size: 12px; color: #4B5563;">© 2026 Capital Shield AI</span>
     </div>
 
 </div>
+
+<!-- Yandex Metrika -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){
+m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+})(window, document, "script", "https://yandex.ru", "ym");
+
+ym(97011244, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+});
+</script>
+
+<noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
 </body>
 </html>
