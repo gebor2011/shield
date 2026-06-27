@@ -98,10 +98,12 @@
             box-shadow: 0 8px 30px rgba(245,197,66,0.05);
         }
 
-        /* Специальный стиль для карточек услуг — "оживление" при наведении */
+        /* Стиль для карточек услуг — "оживление" при наведении */
         .service-card {
             transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            text-align: center;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
         }
         .service-card:hover {
             transform: translateY(-8px) scale(1.02);
@@ -109,15 +111,51 @@
             box-shadow: 0 12px 35px -8px rgba(124, 140, 255, 0.35), inset 0 0 0 1px rgba(124, 140, 255, 0.15);
             background: rgba(124, 140, 255, 0.06);
         }
+        .service-card .card-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
         .service-card h3 {
             font-size: 20px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #E8EDF5;
         }
-        .service-card p {
+        .service-card .desc {
             font-size: 15px;
+            color: #D1D9E6;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 12px 0;
+        }
+        .service-card ul li {
+            font-size: 14px;
             color: #9CA3AF;
-            line-height: 1.5;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+        .service-card ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #F5C542;
+            font-weight: 700;
+        }
+        .service-card .result {
+            font-size: 15px;
+            color: #E8EDF5;
+            font-weight: 600;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid #2A2F3F;
+        }
+        .service-card .result span {
+            color: #F5C542;
         }
 
         .card-icon {
@@ -204,12 +242,12 @@
 <body>
     <div class="container">
 
-        <!-- ШАПКА (изменена) -->
+        <!-- ШАПКА -->
         <div class="logo">
             <span class="icon">🛡️</span> CAPITAL SHIELD AI
         </div>
 
-        <!-- ГЛАВНЫЙ БЛОК (заголовок и текст из вашего файла, каждое предложение отдельным абзацем) -->
+        <!-- ГЛАВНЫЙ БЛОК (текст из вашего файла) -->
         <div>
             <h1>Capital Shield AI</h1>
             <div class="subhead" style="max-width: 100%;">
@@ -231,26 +269,73 @@
             </div>
         </div>
 
-        <!-- НАШИ УСЛУГИ (новый блок, 3 колонки с "оживлением") -->
+        <!-- НАШИ УСЛУГИ (НОВЫЙ БЛОК с тремя подробными услугами) -->
         <div style="margin-top: 56px;">
             <h2 class="section-title">Наши услуги</h2>
             <div class="grid-3">
+                <!-- Услуга 1: Анализ проекта -->
                 <div class="card service-card">
-                    <h3>Непрерывный мониторинг</h3>
-                    <p>Круглосуточное сканирование проектов и активов в реальном времени.</p>
+                    <div class="card-icon">🧭</div>
+                    <h3>Анализ проекта</h3>
+                    <div class="desc">
+                        Это первый шаг, чтобы понять, с чем ты имеешь дело.
+                        <br><br>
+                        Неважно, уже зашёл ты в проект или только рассматриваешь его — сначала нужно увидеть реальную картину.
+                        <br><br>
+                        Мы показываем:
+                    </div>
+                    <ul>
+                        <li>что это за проект на самом деле</li>
+                        <li>где реальные сильные и слабые стороны</li>
+                        <li>какие риски уже заложены в структуре</li>
+                        <li>на что стоит обратить внимание до любых решений</li>
+                    </ul>
+                    <div class="result">👉 <span>Результат:</span> у тебя есть понятная база — с чем ты имеешь дело</div>
                 </div>
+
+                <!-- Услуга 2: Capital Shield Guardian -->
                 <div class="card service-card">
-                    <h3>Математический анализ</h3>
-                    <p>Оценка рисков на основе алгоритмов и статистических моделей.</p>
+                    <div class="card-icon">🛡️</div>
+                    <h3>Capital Shield Guardian</h3>
+                    <div class="desc">
+                        Это следующий уровень — когда ты уже в проекте и хочешь быть защищённым.
+                        <br><br>
+                        Мы не “наблюдаем за развитием”.<br>
+                        Мы отслеживаем изменения, которые могут повлиять на твои деньги.
+                        <br><br>
+                        Что мы делаем:
+                    </div>
+                    <ul>
+                        <li>фиксируем стартовую точку проекта</li>
+                        <li>отслеживаем изменения в его состоянии</li>
+                        <li>даём сигналы, когда растут риски</li>
+                        <li>предупреждаем о важных изменениях</li>
+                        <li>5 отчётов за 2 месяца</li>
+                    </ul>
+                    <div class="result">👉 <span>Результат:</span> ты вовремя узнаёшь, когда в проекте начинаются проблемы</div>
                 </div>
+
+                <!-- Услуга 3: Проверка смарт-контракта -->
                 <div class="card service-card">
-                    <h3>Сигналы раннего предупреждения</h3>
-                    <p>Оповещения о критических изменениях до того, как они повлияют на тебя.</p>
+                    <div class="card-icon">🔬</div>
+                    <h3>Проверка смарт-контракта</h3>
+                    <div class="desc">
+                        Отдельная техническая проверка для DeFi и токенов.
+                        <br><br>
+                        Мы проверяем:
+                    </div>
+                    <ul>
+                        <li>можно ли вывести деньги в любой момент</li>
+                        <li>есть ли скрытые ограничения</li>
+                        <li>есть ли опасные функции управления</li>
+                        <li>есть ли риск блокировки средств</li>
+                    </ul>
+                    <div class="result">👉 <span>Результат:</span> понимаешь, безопасен ли технический фундамент проекта</div>
                 </div>
             </div>
         </div>
 
-        <!-- ЦЕЛЕВАЯ АУДИТОРИЯ (без изменений) -->
+        <!-- ЦЕЛЕВАЯ АУДИТОРИЯ -->
         <div style="margin-top: 32px;">
             <h2 class="section-title" style="font-size: 22px; margin-bottom: 16px;">Целевая аудитория сервиса</h2>
             <div class="grid-3">
@@ -272,11 +357,10 @@
             </div>
         </div>
 
-        <!-- ПРОДУКТЫ (без изменений) -->
+        <!-- ПРОДУКТЫ -->
         <div style="margin-top: 56px;">
             <h2 class="section-title">Продукты сервиса. Акция первого заказа – Все 3 продукта - 90$.</h2>
             <div class="grid-3">
-                <!-- Продукт 1 -->
                 <div class="card">
                     <div class="card-icon">🧭</div>
                     <h3>Экспресс-анализ проекта</h3>
@@ -287,7 +371,6 @@
                     <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
                 </div>
 
-                <!-- Продукт 2 -->
                 <div class="card">
                     <div class="card-icon">🔬</div>
                     <h3>Технический аудит смарт-контрактов</h3>
@@ -298,7 +381,6 @@
                     <a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">Заказать</a>
                 </div>
 
-                <!-- Продукт 3 -->
                 <div class="card">
                     <div class="card-icon">🛡️</div>
                     <h3>Прогнозный анализ + Комплексный Due Diligence</h3>
@@ -311,7 +393,7 @@
             </div>
         </div>
 
-        <!-- ЧЕМ ПОЛЕЗНЫ НАШИ ПРОДУКТЫ (без изменений) -->
+        <!-- ЧЕМ ПОЛЕЗНЫ НАШИ ПРОДУКТЫ -->
         <div style="margin-top: 56px;">
             <h2 class="section-title">Чем полезны наши продукты</h2>
             <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px;">
@@ -373,7 +455,7 @@
             </div>
         </div>
 
-        <!-- ПАРТНЁРСКАЯ ПРОГРАММА (без изменений) -->
+        <!-- ПАРТНЁРСКАЯ ПРОГРАММА -->
         <div style="margin-top: 56px;">
             <div style="background: #12161F; border-radius: 20px; padding: 32px 28px; border: 1px solid #2A2F3F;">
                 <h3 style="font-size: 22px; font-weight: 700; color: #E8EDF5; margin-bottom: 8px;">Предварительная запись на участие в Партнёрской программе «Компас Инвестора»</h3>
@@ -383,7 +465,7 @@
             </div>
         </div>
 
-        <!-- ПРИЗЫВ (без изменений) -->
+        <!-- ПРИЗЫВ -->
         <div style="margin-top: 48px; text-align: center; background: #12161F; border-radius: 28px; padding: 32px; border: 1px solid #2A2F3F;">
             <p style="font-size: 16px; color: #9CA3AF; margin-bottom: 12px;">Не рискуйте вслепую. Проверьте свой проект прямо сейчас.</p>
             <p style="font-size: 14px; color: #6B7280; margin-bottom: 16px;">Присоединяйтесь к группе «Компас Инвестора»: получите полную информацию об услугах, задайте вопросы и посмотрите примеры наших отчётов.</p>
@@ -400,7 +482,7 @@
 
     </div>
 
-    <!-- Яндекс.Метрика (оставлена без изменений) -->
+    <!-- Яндекс.Метрика -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
