@@ -1,248 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital Shield AI — Система непрерывного контроля и анализа инвестиционных рисков</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background: #0B0E17;
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-            color: #E8EDF5;
-            line-height: 1.5;
-            padding: 0 16px;
-        }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 0 60px; }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #1A1F2C;
-            padding-bottom: 20px;
-        }
-
-        .logo .icon { color: #F5C542; }
-        .logo .accent { color: #9CA3AF; font-weight: 400; }
-        .logo .sub { font-size: 14px; color: #9CA3AF; font-weight: 400; display: block; margin-top: 2px; }
-
-        .badge {
-            display: inline-block;
-            background: #1A1F2C;
-            border: 1px solid #2A2F3F;
-            border-radius: 40px;
-            padding: 6px 16px;
-            font-size: 13px;
-            color: #9CA3AF;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 40px;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
-
-        .subhead {
-            font-size: 18px;
-            color: #9CA3AF;
-            max-width: 850px;
-        }
-
-        .section-title {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin: 32px 0;
-        }
-
-        .card {
-            background: #12161F;
-            border-radius: 20px;
-            padding: 28px 24px;
-            border: 1px solid #2A2F3F;
-        }
-
-        .card h3 { font-size: 18px; margin-bottom: 10px; }
-        .card p { font-size: 14px; color: #9CA3AF; margin-bottom: 10px; }
-
-        .price {
-            font-size: 28px;
-            font-weight: 800;
-            color: #F5C542;
-            margin: 16px 0 8px;
-        }
-
-        .btn-gold {
-            display: inline-block;
-            background: #F5C542;
-            color: #0B0E17;
-            font-weight: 700;
-            padding: 12px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            width: 100%;
-            text-align: center;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #6B7280;
-            border-top: 1px solid #1A1F2C;
-            padding-top: 24px;
-            text-align: center;
-        }
-
-        .footer a { color: #9CA3AF; text-decoration: none; }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 28px; }
-            .grid-3 { grid-template-columns: 1fr; }
-        }
-    </style>
-
-    <script src="https://getlaunchlist.com/js/widget.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Shield AI — лендинг</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      background: linear-gradient(145deg, #0b0d1a 0%, #14172b 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      max-width: 820px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 48px;
+      padding: 48px 40px;
+      box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .logo {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #7c8cff;
+      background: rgba(124, 140, 255, 0.12);
+      padding: 6px 18px;
+      border-radius: 40px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(124, 140, 255, 0.2);
+    }
+    .content p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #eef1ff;
+      margin-bottom: 18px;
+      opacity: 0.92;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+    .content p strong {
+      color: #a8b8ff;
+      font-weight: 600;
+    }
+    .highlight {
+      background: linear-gradient(90deg, #7c8cff, #b47cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+    .footer-note {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.25);
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+    @media (max-width: 600px) {
+      .card {
+        padding: 32px 20px;
+        border-radius: 32px;
+      }
+      .content p {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-    <!-- ШАПКА -->
-    <div class="logo">
-        <span class="icon">🛡</span> CAPITAL SHIELD AI
-        <span class="sub">Система непрерывного контроля и анализа инвестиционных рисков</span>
+  <div class="card">
+    <div class="logo">⚡ Capital Shield AI</div>
+    <div class="content">
+      <!-- КАЖДОЕ ПРЕДЛОЖЕНИЕ — НА НОВОЙ СТРОКЕ (ОТДЕЛЬНЫЙ АБЗАЦ) -->
+      <p>В мире, где инвестиционные и сетевые проекты меняются молниеносно, а информация устаревает за часы, полагаться на разовую проверку — значит играть в рулетку.</p>
+      <p><strong>Capital Shield AI</strong> — это не просто аудит.</p>
+      <p>Это твоя персональная система раннего предупреждения, которая непрерывно отслеживает инвестиционные риски в любом проекте.</p>
+      <p>Мы даём тебе не догадки, а математически обоснованные данные и конкретные сигналы, чтобы ты всегда был на шаг впереди.</p>
+      <p>Забудь о страхе внезапных потерь – теперь ты будешь точно знать, что происходит с твоими активами и когда пора действовать.</p>
     </div>
-
-    <!-- HERO -->
-    <div>
-        <span class="badge">Анализ инвестиционных рисков</span>
-
-        <h1>Capital Shield AI: Больше, чем проверка. Это твоя защита в мире инвестиций.</h1>
-
-        <p style="font-size: 22px; font-weight: 600; color: #E8EDF5; margin-bottom: 8px;">
-            Система постоянного контроля рисков для инвесторов и лидеров в любых сетевых и инвестиционных проектах.
-        </p>
-
-        <p style="font-size: 18px; color: #F5C542; margin-bottom: 16px; font-weight: 500;">
-            «Твой капитал под защитой 24/7. Никаких сюрпризов, только точные рекомендации.»
-        </p>
-
-        <p class="subhead" style="margin-top: 16px;">
-            В мире, где инвестиционные и сетевые проекты меняются молниеносно, а информация устаревает за часы, полагаться на разовую проверку — значит играть в рулетку. 
-            Capital Shield AI — это не просто аудит. 
-            Это твоя персональная система раннего предупреждения, которая непрерывно отслеживает инвестиционные риски в любом проекте. 
-            Мы даём тебе не догадки, а математически обоснованные данные и конкретные сигналы, чтобы ты всегда был на шаг впереди. 
-            Забудь о страхе внезапных потерь – теперь ты будешь точно знать, что происходит с твоими активами и когда пора действовать.
-        </p>
-    </div>
-
-    <!-- PROBLEM -->
-    <div style="margin-top:40px;">
-        <h2 class="section-title">Разовый аудит даёт снимок момента. Но проект живёт и меняется каждый день.</h2>
-        <p style="color:#9CA3AF; max-width:850px;">
-            Вы получили отчёт. Всё чисто. А через месяц проект начал «сыпаться»: задержки выплат, отток лидеров, странные движения кошельков. Вы узнаёте об этом постфактум, когда уже поздно.
-        </p>
-        <p style="color:#E8EDF5; margin-top:12px; font-weight:600;">
-            Без постоянного контроля вы всегда рискуете.
-        </p>
-    </div>
-
-    <!-- SERVICES -->
-    <div style="margin-top:56px;">
-        <h2 class="section-title">Наши услуги</h2>
-
-        <div class="grid-3">
-
-            <!-- 1. Старт -->
-            <div class="card">
-                <h3>🧭 Первичный Анализ Проекта</h3>
-                <p style="font-size: 12px; color: #F5C542; margin-bottom: 8px;">Capital Shield Start</p>
-                <p>Это твой первый шаг к безопасности, чтобы точно понять, с чем ты имеешь дело.</p>
-                <p><b style="color:#E8EDF5;">Что мы даём:</b> реальную картину проекта — сильные стороны, слабые места и скрытые риски.</p>
-                <p><b style="color:#E8EDF5;">Результат:</b> понятная база для решения — заходить, ждать или не связываться.</p>
-                <div class="price">$39</div>
-                <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
-            </div>
-
-            <!-- 2. Guardian -->
-            <div class="card">
-                <h3>🛡️ Capital Shield GUARDIAN</h3>
-                <p style="font-size: 12px; color: #F5C542; margin-bottom: 8px;">Система постоянного контроля рисков</p>
-                <p>Это ключевой уровень защиты для тех, кто уже в проекте и хочет быть в полной безопасности.</p>
-                <p><b style="color:#E8EDF5;">Что мы делаем:</b> фиксируем точку отсчёта, отслеживаем изменения, даём сигналы роста риска.</p>
-                <p><b style="color:#E8EDF5;">Результат:</b> 5 отчётов за 2 месяца + экстренные оповещения.</p>
-                <div class="price">$79</div>
-                <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
-            </div>
-
-            <!-- 3. Код -->
-            <div class="card">
-                <h3>🔬 Технический Аудит Смарт-Контракта</h3>
-                <p style="font-size: 12px; color: #F5C542; margin-bottom: 8px;">Capital Shield Code</p>
-                <p>Отдельная глубокая проверка для DeFi, протоколов, пулов ликвидности и новых токенов.</p>
-                <p><b style="color:#E8EDF5;">Что мы проверяем:</b> возможность вывода, скрытые ограничения, опасные функции управления.</p>
-                <p><b style="color:#E8EDF5;">Результат:</b> понимаешь, безопасен ли технический фундамент проекта.</p>
-                <div class="price">$29</div>
-                <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- CTA (ИСПРАВЛЕН) -->
-    <div style="margin-top:56px; text-align:center; padding:32px; background:#12161F; border-radius:20px; border:1px solid #2A2F3F;">
-        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 16px;">Начните разговор о защите вашего капитала</h2>
-        <p style="color:#9CA3AF; margin-bottom: 24px;">Задайте вопрос, уточните детали или закажите услугу — мы на связи.</p>
-        <a href="https://t.me/capitalshieldaiI" target="_blank" style="display: inline-block; background: #F5C542; color: #0B0E17; font-weight: 700; padding: 14px 40px; border-radius: 40px; text-decoration: none; font-size: 18px;">👉 Продолжить разговор</a>
-    </div>
-
-    <!-- FOOTER (обновлена ссылка) -->
-    <div class="footer">
-        <span>🛡 CAPITAL SHIELD GUARDIAN</span>
-        <span style="margin: 0 12px;">·</span>
-        <span>Система постоянного контроля рисков</span>
-        <span style="margin: 0 12px;">·</span>
-        <a href="https://t.me/capitalshieldaiI" target="_blank">Telegram</a>
-        <br>
-        <span style="font-size: 12px; color: #4B5563;">© 2026 Capital Shield AI</span>
-    </div>
-
-</div>
-
-<!-- Yandex Metrika -->
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){
-m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();
-k=e.createElement(t),a=e.getElementsByTagName(t)[0];
-k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
-})(window, document, "script", "https://yandex.ru", "ym");
-
-ym(97011244, "init", {
-    clickmap:true,
-    trackLinks:true,
-    accurateTrackBounce:true,
-    webvisor:true
-});
-</script>
-
-<noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt=""></div></noscript>
-
+    <div class="footer-note">Мониторинг 24/7 • Данные в реальном времени</div>
+  </div>
 </body>
 </html>
