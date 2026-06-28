@@ -47,17 +47,10 @@
             color:#9CA3AF;
         }
 
-        .section-title{
-            font-size:28px;
-            font-weight:700;
-            margin-bottom:16px;
-        }
-
         .grid-3{
             display:grid;
             grid-template-columns:repeat(3,1fr);
             gap:24px;
-            margin:32px 0;
         }
 
         .card{
@@ -66,12 +59,6 @@
             padding:28px 24px;
             border:1px solid #2A2F3F;
         }
-
-        .card:hover{
-            border-color:#F5C542;
-        }
-
-        .service-card h3{font-size:18px;}
 
         .btn-gold{
             display:inline-block;
@@ -82,22 +69,7 @@
             border-radius:40px;
             text-align:center;
             width:100%;
-            margin-top:10px;
             text-decoration:none;
-        }
-
-        .footer{
-            margin-top:40px;
-            text-align:center;
-            font-size:13px;
-            color:#6B7280;
-            border-top:1px solid #1A1F2C;
-            padding-top:24px;
-        }
-
-        @media(max-width:768px){
-            .grid-3{grid-template-columns:1fr;}
-            h1{font-size:28px;}
         }
     </style>
 </head>
@@ -105,10 +77,8 @@
 <body>
 <div class="container">
 
-<!-- HEADER -->
 <div class="logo"><span class="icon">🛡️</span> КОМПАС ИНВЕСТОРА powered by Capital Shield AI</div>
 
-<!-- HERO -->
 <h1>Компас Инвестора — система раннего предупреждения инвестиционных рисков</h1>
 
 <div class="subhead" style="margin-top:16px;">
@@ -117,87 +87,227 @@
 <p>Разовая проверка не показывает будущие изменения.</p>
 <br>
 <p><strong style="color:#fff;">
-Именно поэтому мы создали Capital Shield AI — систему, которая отслеживает изменения и риски в проектах.
+Именно поэтому мы создали Capital Shield AI — систему контроля рисков и изменений в проектах.
 </strong></p>
 <br>
 <p>Вы получаете не просто отчёт, а своевременные предупреждения о критических изменениях.</p>
 </div>
 
-<!-- SERVICES -->
+<!-- УСЛУГИ -->
 <div style="margin-top:56px;">
-<h2 class="section-title">Наши услуги</h2>
+<h2 style="font-size:28px;">Наши услуги</h2>
 
-<div class="grid-3">
+<div class="grid-3" style="margin-top:24px;">
+     <!-- ==================== 1 ==================== -->
+        <div class="card">
+            <h3>🧭 Компас Инвестора — выявление рисков и реального состояния проекта</h3>
+            <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
+                Комплексный анализ инвестиционного проекта
+            </p>
 
-<div class="card service-card">
-<h3>🧭 Компас Инвестора</h3>
-<p>Анализ проекта и оценка рисков</p>
-<a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+            <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
+                <p>• текущее состояние проекта</p>
+                <p>• сильные и слабые стороны</p>
+                <p>• основные инвестиционные риски</p>
+                <p>• прогноз развития проекта</p>
+                <p>• факторы, требующие внимания</p>
+            </div>
+
+            <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
+                <b>Результат:</b> объективная оценка проекта и понимание уровня риска.
+            </div>
+
+            <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$39</div>
+
+            <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+        </div>
+
+        <!-- ==================== 2 ==================== -->
+        <div class="card">
+            <h3>🛡️ Capital Shield Guardian</h3>
+
+            <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
+                Анализ + постоянный контроль проекта после входа
+            </p>
+
+            <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
+                <p>• стартовый полный анализ проекта</p>
+                <p>• фиксация состояния проекта</p>
+                <p>• контроль изменений во времени</p>
+                <p>• 4 отчёта за 2 месяца</p>
+                <p>• предупреждения о критических изменениях</p>
+            </div>
+
+            <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
+                <b>Результат:</b> вы видите не только текущее состояние, но и его изменения.
+            </div>
+
+            <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$79</div>
+
+            <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+        </div>
+
+        <!-- ==================== 3 ==================== -->
+        <div class="card">
+            <h3>📜 Smart Contract Check</h3>
+
+            <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
+                Технический аудит смарт-контракта
+            </p>
+
+            <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
+                <p>• проверка исходного кода</p>
+                <p>• права владельца контракта</p>
+                <p>• возможность изменения логики</p>
+                <p>• выпуск дополнительных токенов</p>
+                <p>• скрытые технические риски</p>
+            </div>
+
+            <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
+                <b>Результат:</b> оценка безопасности смарт-контракта.
+            </div>
+
+            <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$29</div>
+
+            <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+        </div>
+
+    </div>
 </div>
-
-<div class="card service-card">
-<h3>🛡️ Guardian</h3>
-<p>Контроль проекта после входа</p>
-<a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
-</div>
-
-<div class="card service-card">
-<h3>📜 Smart Contract Check</h3>
-<p>Анализ смарт-контрактов</p>
-<a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
-</div>
-
-</div>
-</div>
-
-<!-- REPORTS -->
+<!-- БЛОК: ОТЧЁТЫ -->
 <div style="margin-top:56px;">
-<h2 class="section-title">Что вы получите в отчёте</h2>
 
-<div class="grid-3">
+    <h2 style="font-size:28px;font-weight:700;margin-bottom:16px;">
+        Что вы получите в отчёте
+    </h2>
 
-<div class="card">
-<h3>🧭 Компас Инвестора</h3>
-<p>❓ Какие риски существуют сейчас?</p>
-<p>❓ Можно ли доверять проекту?</p>
-<p>📄 Более 30 параметров оценки</p>
+    <p style="color:#9CA3AF;max-width:850px;margin-bottom:24px;">
+        Каждый отчёт отвечает на вопросы, которые действительно важны инвестору. Ниже показана лишь небольшая часть анализа, который вы получаете по проекту.
+    </p>
+
+    <div class="grid-3">
+
+        <!-- COMPASS -->
+        <div class="card">
+
+            <h3>🧭 Компас Инвестора</h3>
+
+            <p style="font-size:13px;color:#F5C542;margin-top:10px;margin-bottom:12px;">
+                Какие вопросы раскрывает анализ
+            </p>
+
+            <div style="font-size:13px;color:#D1D9E6;line-height:1.8;">
+                <p>❓ Что может стать причиной потери инвестиций?</p>
+                <p>❓ Какие риски уже существуют сейчас?</p>
+                <p>❓ Есть ли признаки нестабильности проекта?</p>
+                <p>❓ Насколько оправдано доверие к команде?</p>
+                <p>❓ Насколько устойчива экономика проекта?</p>
+                <p>❓ Стоит ли входить или увеличивать позицию?</p>
+            </div>
+
+            <p style="margin-top:18px;color:#F5C542;font-size:13px;font-weight:600;">
+                📄 Более 30 параметров анализа + итоговая оценка риска
+            </p>
+
+        </div>
+
+        <!-- GUARDIAN -->
+        <div class="card">
+
+            <h3>🛡️ Capital Shield Guardian</h3>
+
+            <p style="font-size:13px;color:#F5C542;margin-top:10px;margin-bottom:12px;">
+                Что происходит после входа в проект
+            </p>
+
+            <div style="font-size:13px;color:#D1D9E6;line-height:1.8;">
+                <p>❓ Что изменилось после моего входа?</p>
+                <p>❓ Появились ли новые риски?</p>
+                <p>❓ Есть ли тревожные сигналы сейчас?</p>
+                <p>❓ Меняется ли поведение команды?</p>
+                <p>❓ Требуются ли срочные действия?</p>
+                <p>❓ Стоит ли выходить из проекта?</p>
+            </div>
+
+            <p style="margin-top:18px;color:#F5C542;font-size:13px;font-weight:600;">
+                🛡️ Постоянный мониторинг и предупреждения о критических изменениях
+            </p>
+
+        </div>
+
+        <!-- SMART CONTRACT -->
+        <div class="card">
+
+            <h3>📜 Smart Contract Check</h3>
+
+            <p style="font-size:13px;color:#F5C542;margin-top:10px;margin-bottom:12px;">
+                Технические вопросы безопасности
+            </p>
+
+            <div style="font-size:13px;color:#D1D9E6;line-height:1.8;">
+                <p>❓ Может ли владелец изменить правила?</p>
+                <p>❓ Возможна ли дополнительная эмиссия токенов?</p>
+                <p>❓ Есть ли скрытые опасные функции?</p>
+                <p>❓ Насколько защищена ликвидность?</p>
+                <p>❓ Есть ли признаки уязвимостей?</p>
+                <p>❓ Насколько безопасен контракт для инвестора?</p>
+            </div>
+
+            <p style="margin-top:18px;color:#F5C542;font-size:13px;font-weight:600;">
+                🔍 Технический аудит с детальной оценкой рисков
+            </p>
+
+        </div>
+
+    </div>
+</div>
+<!-- ФУТЕР -->
+<div style="margin-top:60px; border-top:1px solid #1A1F2C; padding-top:24px; text-align:center;">
+
+    <div style="font-size:13px;color:#6B7280;">
+        © 2026 Capital Shield AI
+    </div>
+
+    <div style="margin-top:10px;font-size:13px;color:#9CA3AF;">
+        Компас Инвестора · Capital Shield Guardian · Smart Contract Check
+    </div>
+
+    <div style="margin-top:10px;">
+        <a href="https://t.me/capitalshield_ai" style="color:#F5C542;text-decoration:none;font-weight:600;">
+            Telegram
+        </a>
+    </div>
+
 </div>
 
-<div class="card">
-<h3>🛡️ Guardian</h3>
-<p>❓ Что изменилось после входа?</p>
-<p>❓ Есть ли новые риски?</p>
-<p>🛡️ Постоянный контроль</p>
-</div>
+</div> <!-- /container -->
 
-<div class="card">
-<h3>📜 Smart Contract</h3>
-<p>❓ Есть ли опасные функции?</p>
-<p>❓ Насколько безопасен контракт?</p>
-<p>🔍 Технический аудит</p>
-</div>
-
-</div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-© 2026 Capital Shield AI · Компас Инвестора · Telegram
-</div>
-
-</div>
-
-<!-- METRICA -->
-<script>
+<!-- Yandex Metrica -->
+<script type="text/javascript">
 (function(m,e,t,r,i,k,a){
-m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();
-k=e.createElement(t),a=e.getElementsByTagName(t)[0];
-k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+    k.async=1;
+    k.src=r;
+    a.parentNode.insertBefore(k,a);
 })(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
 
-ym(97011244,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+ym(97011244,"init",{
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+});
 </script>
+
+<noscript>
+<div>
+<img src="https://mc.yandex.ru/watch/97011244"
+     style="position:absolute;left:-9999px;"
+     alt="">
+</div>
+</noscript>
 
 </body>
 </html>
