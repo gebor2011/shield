@@ -4,541 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capital Shield AI</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{margin:0;padding:0;box-sizing:border-box;}
+
+        body{
+            background:#0B0E17;
+            font-family:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;
+            color:#E8EDF5;
+            line-height:1.5;
+            padding:0 16px;
         }
 
-        body {
-            background: #0B0E17;
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-            color: #E8EDF5;
-            line-height: 1.5;
-            padding: 0 16px;
+        .container{
+            max-width:1100px;
+            margin:0 auto;
+            padding:40px 0 60px;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 0 60px;
+        .logo{
+            font-size:20px;
+            font-weight:700;
+            color:#fff;
+            margin-bottom:40px;
+            border-bottom:1px solid #1A1F2C;
+            padding-bottom:20px;
         }
 
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            color: #FFFFFF;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #1A1F2C;
-            padding-bottom: 20px;
-        }
-        .logo .icon {
-            color: #F5C542;
+        .logo .icon{color:#F5C542;}
+
+        h1{
+            font-size:40px;
+            font-weight:800;
+            line-height:1.15;
+            margin-bottom:16px;
         }
 
-        h1 {
-            font-size: 40px;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
+        .subhead{
+            font-size:18px;
+            color:#9CA3AF;
         }
 
-        .subhead {
-            font-size: 18px;
-            color: #9CA3AF;
-            max-width: 700px;
-            line-height: 1.6;
+        .section-title{
+            font-size:28px;
+            font-weight:700;
+            margin-bottom:16px;
         }
 
-        .section-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
+        .grid-3{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:24px;
+            margin:32px 0;
         }
 
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin: 32px 0;
+        .card{
+            background:#12161F;
+            border-radius:20px;
+            padding:28px 24px;
+            border:1px solid #2A2F3F;
         }
 
-        .card {
-            background: #12161F;
-            border-radius: 20px;
-            padding: 28px 24px;
-            border: 1px solid #2A2F3F;
-            transition: 0.2s;
+        .card:hover{
+            border-color:#F5C542;
         }
 
-        .card:hover {
-            border-color: #F5C542;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(245,197,66,0.05);
+        .service-card h3{font-size:18px;}
+
+        .btn-gold{
+            display:inline-block;
+            background:#F5C542;
+            color:#0B0E17;
+            font-weight:700;
+            padding:12px 24px;
+            border-radius:40px;
+            text-align:center;
+            width:100%;
+            margin-top:10px;
+            text-decoration:none;
         }
 
-        /* Стиль для карточек услуг — "оживление" при наведении */
-        .service-card {
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-        }
-        .service-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: #7c8cff;
-            box-shadow: 0 12px 35px -8px rgba(124, 140, 255, 0.35), inset 0 0 0 1px rgba(124, 140, 255, 0.15);
-            background: rgba(124, 140, 255, 0.06);
-        }
-        .service-card .card-icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-        .service-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #E8EDF5;
-        }
-        .service-card .desc {
-            font-size: 15px;
-            color: #D1D9E6;
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 12px 0;
-        }
-        .service-card ul li {
-            font-size: 14px;
-            color: #9CA3AF;
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 6px;
-        }
-        .service-card ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #F5C542;
-            font-weight: 700;
-        }
-        .service-card .result {
-            font-size: 15px;
-            color: #E8EDF5;
-            font-weight: 600;
-            margin-top: auto;
-            padding-top: 12px;
-            border-top: 1px solid #2A2F3F;
-        }
-        .service-card .result span {
-            color: #F5C542;
+        .footer{
+            margin-top:40px;
+            text-align:center;
+            font-size:13px;
+            color:#6B7280;
+            border-top:1px solid #1A1F2C;
+            padding-top:24px;
         }
 
-        /* Цена золотом */
-        .service-card .price {
-            font-size: 32px;
-            font-weight: 800;
-            color: #F5C542;
-            margin: 12px 0 8px 0;
-            letter-spacing: 0.5px;
-        }
-
-        /* Кнопка заказа */
-        .btn-gold {
-            display: inline-block;
-            background: #F5C542;
-            color: #0B0E17;
-            font-weight: 700;
-            font-size: 15px;
-            padding: 12px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            transition: 0.2s;
-            text-align: center;
-            width: 100%;
-            border: none;
-            cursor: pointer;
-            margin-top: 4px;
-        }
-        .btn-gold:hover {
-            background: #E0B030;
-            transform: scale(1.02);
-            box-shadow: 0 0 20px rgba(245,197,66,0.2);
-        }
-
-        .card-icon {
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
-
-        .card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            font-size: 14px;
-            color: #9CA3AF;
-            line-height: 1.5;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #6B7280;
-            border-top: 1px solid #1A1F2C;
-            padding-top: 24px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #8E96A7;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #FFFFFF;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 28px; }
-            .subhead { font-size: 16px; }
-            .section-title { font-size: 24px; }
-            .grid-3 { grid-template-columns: 1fr; }
-            .logo { font-size: 16px; }
+        @media(max-width:768px){
+            .grid-3{grid-template-columns:1fr;}
+            h1{font-size:28px;}
         }
     </style>
-    <script src="https://getlaunchlist.com/js/widget.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
+<div class="container">
 
-        <!-- ШАПКА -->
-        <div class="logo">
-            <span class="icon">🛡️</span> КОМПАС ИНВЕСТОРА powered by Capital Shield AI</div>
+<!-- HEADER -->
+<div class="logo"><span class="icon">🛡️</span> КОМПАС ИНВЕСТОРА powered by Capital Shield AI</div>
 
-        <!-- ГЛАВНЫЙ БЛОК -->
-<div>
-
+<!-- HERO -->
 <h1>Компас Инвестора — система раннего предупреждения инвестиционных рисков</h1>
 
-<div class="subhead" style="max-width:100%;">
-
-<p style="margin-bottom:16px;font-size:18px;color:#D1D9E6;line-height:1.6;">
-
-Любой инвестиционный проект может выглядеть надёжным сегодня. Но ситуация способна измениться в любой момент. Если узнать об этом слишком поздно, цена ошибки может оказаться очень высокой.
-
-</p>
-
-<p style="margin-bottom:16px;font-size:18px;color:#D1D9E6;line-height:1.6;">
-
-Разовая проверка показывает, что происходит в проекте сегодня. Но она не предупредит, если ситуация начнёт меняться завтра.
-
-</p>
-
-<p style="margin-bottom:16px;font-size:18px;color:#D1D9E6;line-height:1.6;">
-
-<strong style="color:#E8EDF5;">Именно поэтому мы создали Capital Shield AI — сервис, который помогает вовремя замечать изменения, способные повлиять на безопасность ваших инвестиций.
-</p>
-
-<p style="margin-bottom:16px;font-size:18px;color:#D1D9E6;line-height:1.6;">
-
-Вы получаете не просто отчёт, а своевременные предупреждения о важных изменениях, чтобы успеть принять решение до того, как риск станет проблемой.
-
-</p>
-
-<p style="font-size:18px;color:#D1D9E6;line-height:1.6;">
-
-Пока вы занимаетесь своими делами, мы продолжаем следить за проектом и сообщаем, когда действительно появляется повод обратить на него внимание.
-
-</p>
-
+<div class="subhead" style="margin-top:16px;">
+<p>Любой инвестиционный проект может выглядеть надёжным сегодня, но ситуация может измениться в любой момент.</p>
+<br>
+<p>Разовая проверка не показывает будущие изменения.</p>
+<br>
+<p><strong style="color:#fff;">
+Именно поэтому мы создали Capital Shield AI — систему, которая отслеживает изменения и риски в проектах.
+</strong></p>
+<br>
+<p>Вы получаете не просто отчёт, а своевременные предупреждения о критических изменениях.</p>
 </div>
 
-</div>
-        <!-- НАШИ УСЛУГИ -->
+<!-- SERVICES -->
 <div style="margin-top:56px;">
-
 <h2 class="section-title">Наши услуги</h2>
-
-<p class="subhead" style="max-width:900px;margin-bottom:24px;">
-Вы можете заказать разовый анализ проекта или доверить нам его дальнейший контроль.
-Выберите вариант, который лучше всего подходит именно вам.
-</p>
 
 <div class="grid-3">
 
-<!-- ==================== 1 ==================== -->
+<div class="card service-card">
+<h3>🧭 Компас Инвестора</h3>
+<p>Анализ проекта и оценка рисков</p>
+<a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+</div>
 
 <div class="card service-card">
-
-<div class="card-icon">🧭</div>
-
-<h3>Компас Инвестора — выявление рисков и реального состояния инвестиционного проекта</h3>
-
-<div class="desc">
-
-Неважно, только вы рассматриваете проект или уже инвестировали.
-
-Сначала важно понять его реальное состояние.
-
-<br><br>
-
-Мы проводим комплексный анализ проекта и показываем объективную картину без рекламных обещаний и громких заявлений.
-
+<h3>🛡️ Guardian</h3>
+<p>Контроль проекта после входа</p>
+<a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
 </div>
-
-<ul>
-
-<li>текущее состояние проекта</li>
-
-<li>сильные и слабые стороны</li>
-
-<li>основные инвестиционные риски</li>
-
-<li>прогнозный анализ развития проекта</li>
-
-<li>факторы, требующие особого внимания</li>
-
-</ul>
-
-<div class="result">
-
-👉 <span>Результат:</span>
-
-вы получаете объективную оценку проекта и понимаете, стоит ли ему доверять и на что обратить внимание.
-
-</div>
-
-<div class="price">$39</div>
-
-<a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">
-
-Заказать
-
-</a>
-
-</div>
-
-
-
-<!-- ==================== 2 ==================== -->
 
 <div class="card service-card">
-
-<div class="card-icon">🛡️</div>
-
-<h3>Capital Shield Guardian</h3>
-
-<div class="desc">
-
-Любой проект продолжает меняться после анализа.
-
-Если вы остаётесь в проекте, важно вовремя узнавать обо всех изменениях, которые могут повлиять на ваши инвестиции.
-
-<br><br>
-
-Именно для этого создан Capital Shield Guardian.
-
-</div>
-
-<ul>
-
-<li>полный анализ проекта перед началом сопровождения</li>
-
-<li>фиксация текущего состояния проекта</li>
-
-<li>прогнозный анализ</li>
-
-<li>5 подробных отчётов за 2 месяца</li>
-
-<li>предупреждения о важных изменениях между отчётами</li>
-
-</ul>
-
-<div class="result">
-
-👉 <span>Результат:</span>
-
-пока вы занимаетесь своими делами, мы продолжаем следить за проектом и предупреждаем вас, если риск начинает расти.
-
-</div>
-
-<div class="price">$79</div>
-
-<a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">
-
-Заказать
-
-</a>
-
-</div>
-
-
-
-<!-- ==================== 3 ==================== -->
-
-<div class="card service-card">
-
-<div class="card-icon">🔬</div>
-
-<h3>Проверка смарт-контракта</h3>
-
-<div class="desc">
-
-Отдельная техническая проверка для проектов на блокчейне.
-
-Она помогает выявить скрытые технические риски ещё до инвестирования.
-
-</div>
-
-<ul>
-
-<li>возможность свободного вывода средств</li>
-
-<li>скрытые ограничения</li>
-
-<li>опасные функции управления</li>
-
-<li>признаки технических уязвимостей</li>
-
-</ul>
-
-<div class="result">
-
-👉 <span>Результат:</span>
-
-вы понимаете, насколько безопасен смарт-контракт и существуют ли технические риски для инвестора.
-
-</div>
-
-<div class="price">$29</div>
-
-<a href="https://t.me/capitalshield_ai" target="_blank" class="btn-gold">
-
-Заказать
-
-</a>
-
+<h3>📜 Smart Contract Check</h3>
+<p>Анализ смарт-контрактов</p>
+<a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
 </div>
 
 </div>
-
 </div>
-       <!-- БЛОК: ЧТО ВЫ ПОЛУЧИТЕ В ОТЧЁТЕ -->
+
+<!-- REPORTS -->
 <div style="margin-top:56px;">
-    <h2 class="section-title">Что вы получите в отчёте</h2>
+<h2 class="section-title">Что вы получите в отчёте</h2>
 
-    <p style="color:#9CA3AF; max-width:850px; margin-bottom:24px;">
-        Каждый отчёт отвечает на вопросы, которые волнуют любого инвестора. Ниже показана лишь небольшая часть информации, которую вы получите после анализа проекта.
-    </p>
+<div class="grid-3">
 
-    <div class="grid-3">
-
-        <!-- Компас Инвестора -->
-        <div class="card">
-            <h3>🧭 Компас Инвестора</h3>
-
-            <p style="font-size:12px; color:#F5C542; margin-bottom:12px;">
-                Примеры вопросов, на которые отвечает отчёт
-            </p>
-
-            <div style="font-size:13px; color:#D1D9E6; line-height:1.8;">
-                <p>❓ Что может стать причиной потери ваших инвестиций?</p>
-                <p>❓ Какие риски уже существуют сегодня?</p>
-                <p>❓ Есть ли признаки нестабильности проекта?</p>
-                <p>❓ Можно ли доверять команде и её действиям?</p>
-                <p>❓ Насколько устойчива экономика проекта?</p>
-                <p>❓ Стоит ли входить или увеличить инвестиции?</p>
-            </div>
-
-            <p style="margin-top:18px; color:#F5C542; font-size:13px; font-weight:600;">
-                📄 Полный отчёт содержит более 30 параметров оценки, итоговый рейтинг проекта и рекомендации для инвестора.
-            </p>
-        </div>
-
-        <!-- Guardian -->
-        <div class="card">
-            <h3>🛡️ Capital Shield Guardian</h3>
-
-            <p style="font-size:12px; color:#F5C542; margin-bottom:12px;">
-                Всё из «Компаса Инвестора» + постоянный контроль проекта
-            </p>
-
-            <div style="font-size:13px; color:#D1D9E6; line-height:1.8;">
-                <p>❓ Что изменилось после моего входа в проект?</p>
-                <p>❓ Появились ли новые риски?</p>
-                <p>❓ Есть ли тревожные сигналы уже сейчас?</p>
-                <p>❓ Изменилось ли поведение команды?</p>
-                <p>❓ Требуются ли срочные действия?</p>
-                <p>❓ Продолжать участие или пора пересмотреть решение?</p>
-            </div>
-
-            <p style="margin-top:18px; color:#F5C542; font-size:13px; font-weight:600;">
-                🛡️ Guardian регулярно контролирует проект и предупреждает о критических изменениях ещё до того, как они станут очевидны большинству участников.
-            </p>
-        </div>
-
-        <!-- Smart Contract -->
-        <div class="card">
-            <h3>📜 Smart Contract Check</h3>
-
-            <p style="font-size:12px; color:#F5C542; margin-bottom:12px;">
-                Примеры вопросов технического анализа
-            </p>
-
-            <div style="font-size:13px; color:#D1D9E6; line-height:1.8;">
-                <p>❓ Может ли владелец изменить правила работы контракта?</p>
-                <p>❓ Возможен ли выпуск дополнительных токенов?</p>
-                <p>❓ Есть ли скрытые опасные функции?</p>
-                <p>❓ Насколько защищена ликвидность?</p>
-                <p>❓ Есть ли технические признаки повышенного риска?</p>
-                <p>❓ Насколько безопасен контракт для инвестора?</p>
-            </div>
-
-            <p style="margin-top:18px; color:#F5C542; font-size:13px; font-weight:600;">
-                🔍 Проверка выполняется по десяткам технических параметров безопасности с подробным заключением экспертов.
-            </p>
-        </div>
-
-    </div>
+<div class="card">
+<h3>🧭 Компас Инвестора</h3>
+<p>❓ Какие риски существуют сейчас?</p>
+<p>❓ Можно ли доверять проекту?</p>
+<p>📄 Более 30 параметров оценки</p>
 </div>
-        <!-- ПОДВАЛ -->
-        <div class="footer">
-            <span>© 2026 Capital Shield AI</span>
-        
-            <p style="margin-top:14px; font-size:13px; color:#9CA3AF;">
-                <b style="color:#E8EDF5;">Результат:</b> техническое заключение о безопасности смарт-контракта.
-            </p>
-        </div>
 
-    </div>
-</div>    <span style="margin: 0 12px;">·</span>
-            <span>Компас Инвестора</span>
-            <span style="margin: 0 12px;">·</span>
-            <a href="https://t.me/capitalshieldaiI" target="_blank">Telegram</a>
-        </div>
+<div class="card">
+<h3>🛡️ Guardian</h3>
+<p>❓ Что изменилось после входа?</p>
+<p>❓ Есть ли новые риски?</p>
+<p>🛡️ Постоянный контроль</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>📜 Smart Contract</h3>
+<p>❓ Есть ли опасные функции?</p>
+<p>❓ Насколько безопасен контракт?</p>
+<p>🔍 Технический аудит</p>
+</div>
 
-    <!-- Яндекс.Метрика -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < e.length; j++) {if (e[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t),k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://yandex.ru", "ym");
-        ym(97011244, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
-    </script>
-    <noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Capital Shield AI · Компас Инвестора · Telegram
+</div>
+
+</div>
+
+<!-- METRICA -->
+<script>
+(function(m,e,t,r,i,k,a){
+m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+
+ym(97011244,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
 
 </body>
 </html>
