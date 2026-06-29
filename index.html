@@ -71,6 +71,36 @@
             width:100%;
             text-decoration:none;
         }
+
+        .note{
+            font-size:13px;
+            color:#9CA3AF;
+            margin-top:12px;
+            padding:10px 14px;
+            background:#1A1F2C;
+            border-radius:10px;
+            border-left:3px solid #F5C542;
+        }
+
+        .note strong{
+            color:#E8EDF5;
+        }
+
+        @media (max-width:768px){
+            .grid-3{
+                grid-template-columns:1fr;
+                gap:20px;
+            }
+            h1{
+                font-size:28px;
+            }
+            .container{
+                padding:20px 0 40px;
+            }
+            .card{
+                padding:20px 16px;
+            }
+        }
     </style>
 </head>
 
@@ -98,82 +128,107 @@
 <h2 style="font-size:28px;">Наши услуги</h2>
 
 <div class="grid-3" style="margin-top:24px;">
-     <!-- ==================== 1 ==================== -->
-        <div class="card">
-            <h3>🧭 Компас Инвестора — выявление рисков и реального состояния проекта</h3>
-            <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
-                Комплексный анализ инвестиционного проекта
-            </p>
 
-            <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
-                <p>• текущее состояние проекта</p>
-                <p>• сильные и слабые стороны</p>
-                <p>• основные инвестиционные риски</p>
-                <p>• прогноз развития проекта</p>
-                <p>• факторы, требующие внимания</p>
-            </div>
+     <!-- ==================== 1 КОМПАС ==================== -->
+    <div class="card">
+        <h3>🧭 Компас Инвестора — выявление рисков и реального состояния проекта</h3>
+        <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
+            Комплексный анализ инвестиционного проекта
+        </p>
 
-            <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
-                <b>Результат:</b> объективная оценка проекта и понимание уровня риска.
-            </div>
-
-            <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$39</div>
-
-            <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+        <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
+            <p>• текущее состояние проекта</p>
+            <p>• сильные и слабые стороны</p>
+            <p>• основные инвестиционные риски</p>
+            <p>• прогноз развития проекта</p>
+            <p>• факторы, требующие внимания</p>
+            <p style="color:#F5C542;">✅ <strong>включает полную проверку смарт-контракта (токена)</strong></p>
         </div>
 
-        <!-- ==================== 2 ==================== -->
-        <div class="card">
-            <h3>🛡️ Capital Shield Guardian</h3>
-
-            <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
-                Анализ + постоянный контроль проекта после входа
-            </p>
-
-            <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
-                <p>• стартовый полный анализ проекта</p>
-                <p>• фиксация состояния проекта</p>
-                <p>• контроль изменений во времени</p>
-                <p>• 4 отчёта за 2 месяца</p>
-                <p>• предупреждения о критических изменениях</p>
-            </div>
-
-            <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
-                <b>Результат:</b> вы видите не только текущее состояние, но и его изменения.
-            </div>
-
-            <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$79</div>
-
-            <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+        <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
+            <b>Результат:</b> объективная оценка проекта и понимание уровня риска.
         </div>
 
-        <!-- ==================== 3 ==================== -->
-        <div class="card">
-            <h3>📜 Smart Contract Check</h3>
+        <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$39</div>
 
-            <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
-                Технический аудит смарт-контракта
-            </p>
+        <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+    </div>
 
-            <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
-                <p>• проверка исходного кода</p>
-                <p>• права владельца контракта</p>
-                <p>• возможность изменения логики</p>
-                <p>• выпуск дополнительных токенов</p>
-                <p>• скрытые технические риски</p>
-            </div>
+    <!-- ==================== 2 ГВАРДИАН ==================== -->
+    <div class="card">
+        <h3>🛡️ Capital Shield Guardian</h3>
 
-            <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
-                <b>Результат:</b> оценка безопасности смарт-контракта.
-            </div>
+        <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
+            Анализ + постоянный контроль проекта после входа
+        </p>
 
-            <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$29</div>
-
-            <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+        <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
+            <p>• стартовый полный анализ проекта (на базе <strong>Компаса Инвестора</strong>)</p>
+            <p>• фиксация состояния проекта</p>
+            <p>• контроль изменений во времени</p>
+            <p>• 4 отчёта за 2 месяца (еженедельно)</p>
+            <p>• предупреждения о критических изменениях</p>
         </div>
 
+        <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
+            <b>Результат:</b> вы видите не только текущее состояние, но и его изменения.
+        </div>
+
+        <div class="note">
+            <strong>Важно:</strong> Гвардиан не повторяет полный анализ, а отслеживает динамику на основе уже готового Компаса. Техническая проверка контракта (Smart Contract Check) в Гвардиан не входит — она уже есть в Компасе. Если в течение 2 месяцев появится новый контракт, мы сообщим и предложим отдельную проверку.
+        </div>
+
+        <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$79</div>
+
+        <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+    </div>
+
+    <!-- ==================== 3 СМАРТ-ЧЕК ==================== -->
+    <div class="card">
+        <h3>📜 Smart Contract Check</h3>
+
+        <p style="font-size:14px;color:#9CA3AF;margin-top:10px;">
+            Технический аудит смарт-контракта
+        </p>
+
+        <div style="margin-top:14px;font-size:13px;color:#D1D9E6;line-height:1.6;">
+            <p>• проверка исходного кода</p>
+            <p>• права владельца контракта</p>
+            <p>• возможность изменения логики</p>
+            <p>• выпуск дополнительных токенов</p>
+            <p>• скрытые технические риски</p>
+        </div>
+
+        <div style="margin-top:14px;font-size:13px;color:#E8EDF5;">
+            <b>Результат:</b> оценка безопасности смарт-контракта.
+        </div>
+
+        <div class="note">
+            <strong>Важно:</strong> эта услуга <strong>входит в состав Компаса Инвестора</strong>. Заказывайте её отдельно, только если:<br>
+            • вам нужна только техническая проверка без анализа проекта,<br>
+            • появился новый контракт (например, после обновления токеномики).
+        </div>
+
+        <div style="font-size:28px;color:#F5C542;font-weight:800;margin-top:12px;">$29</div>
+
+        <a class="btn-gold" href="https://t.me/capitalshield_ai">Заказать</a>
+    </div>
+
+</div>
+
+<!-- ДОПОЛНИТЕЛЬНЫЙ БЛОК: КАК ВЫБРАТЬ -->
+<div style="margin-top:32px;background:#12161F;border-radius:20px;padding:24px 28px;border:1px solid #2A2F3F;">
+    <h4 style="font-size:16px;color:#F5C542;margin-bottom:12px;">Как выбрать услугу?</h4>
+    <div style="font-size:14px;color:#D1D9E6;line-height:1.8;">
+        <p>✅ <strong>Компас Инвестора</strong> — полная оценка проекта. Включает всё: команду, токен, токеномику, технический аудит смарт-контракта, продукты, юридический статус, репутацию, риски и прогноз. Это «паспорт» проекта.</p>
+        <p>✅ <strong>Smart Contract Check</strong> — только технический аудит токена. Заказывайте отдельно, если вам не нужен полный анализ проекта или если появился новый контракт.</p>
+        <p>✅ <strong>Capital Shield Guardian</strong> — наблюдение за изменениями после того, как вы вошли в проект. Базой служит Компас. Мы не повторяем полный анализ, а отслеживаем динамику (цена, объём, движение кошельков, выводы, репутация, юридические риски) в течение 2 месяцев.</p>
     </div>
 </div>
+<!-- конец блока "Как выбрать" -->
+
+</div> <!-- /услуги -->
+
 <!-- БЛОК: ОТЧЁТЫ -->
 <div style="margin-top:56px;">
 
@@ -261,7 +316,8 @@
 
     </div>
 </div>
-    <!-- CTA БЛОК -->
+
+<!-- CTA БЛОК -->
 <div style="margin-top:56px; text-align:center; background:#12161F; border-radius:24px; padding:32px; border:1px solid #2A2F3F;">
 
     <div style="font-size:20px;font-weight:700;margin-bottom:12px;">
@@ -279,10 +335,11 @@
     <a href="https://t.me/capitalshieldaiI"
        target="_blank"
        style="display:inline-block;background:#F5C542;color:#0B0E17;font-weight:700;padding:14px 28px;border-radius:40px;text-decoration:none;font-size:15px;">
-        В Компас Мнвестора
+        В Компас Инвестора
     </a>
 
 </div>
+
 <!-- ФУТЕР -->
 <div style="margin-top:60px; border-top:1px solid #1A1F2C; padding-top:24px; text-align:center;">
 
